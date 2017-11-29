@@ -1,8 +1,8 @@
 
-name: "alanarnholt.github.io"
+name: "lasanthiwatagoda.github.io"
 output_dir: "."
 navbar:
-  title: "Alan T. Arnholt"
+  title: "Lasanthi Watagoda"
   left:
     - text: "For Students"
       href: for-students.html
@@ -24,7 +24,7 @@ navbar:
       icon: glyphicon-info-sign
       href: about.html
     - icon: fa-github fa-lg
-      href: https://github.com/alanarnholt/alanarnholt.github.io/  
+      href: https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/  
     
 
 output:
