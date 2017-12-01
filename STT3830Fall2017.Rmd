@@ -9,8 +9,53 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Statistical Methods II
+# [Syllabus] (/Users/hasthika/Documents/3830-syllabus-calendar.pdf)
 
-* Syllabus 
+<figure>
+<img src="./images/Schedule.png" alt="Alan" align="right" hspace="20" style="width:325px;height:400px;">
+</figure>
 
-* Homework Assignments:
 
+
+# Homework Assignments:
+
+  * Homework 01 
+  * Homework 02 
+  * Homework 03 
+  * Homework 04 
+  * Homework 05 
+  * Homework 06 
+  * Homework 07 
+  * Homework 08 
+  * Homework 09 
+  * Homework 10 
+  * Homework 11 
+  * Homework 12 
+  
+# Technology Tutorials
+
+ * Minitab Tutorial 
+ * R Tutorial 
+ * SAS Tutorial 
+ * SPSS Tutorial 
+ 
+ 
+# Mid Term Projects
+
+ * Project 01 
+ * Project 02 
+ * Project 03 
+ * Peer Evaluation 
+
+
+
+#Useful Statistical Tables
+ 
+  * Table D.1 File
+  * Table D.2 and D.3 File
+  * Table D.4 and D.5 File
+  * Table D.5 and D.6 File
+  * Table D.6 and D.7 File
+  
+  
+***
