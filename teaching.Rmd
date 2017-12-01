@@ -8,8 +8,8 @@ output: html_document
 
 ## Classes I teach this semester
 
-* [STT 3830](STT3830Fall2017.html)
-* [STT 2810](https://www.pearsonmylabandmastering.com/northamerica/)
+* [STT 3830 - Statistical Methods](STT3830Fall2017.html) 
+* [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
 * [AsULearn](https://asulearn.appstate.edu/)
 * [Miscellaneous Statistics](https://alanarnholt.github.io/GeneralStatistics/)
