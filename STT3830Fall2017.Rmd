@@ -44,18 +44,16 @@ Click [here](https://odamid.oda.sas.com) and login to SAS studio.
   
 ### Technology Tutorials
 
- * Minitab Tutorial 
- * R Tutorial 
- * SAS Tutorial 
- * SPSS Tutorial 
- 
+* [SAS Tutorial](Documents/SAS.pdf) 
+* [SPSS Tutorial](Documents/SPSS.pdf)  
+* [Minitab Tutorial](Documents/Minitab.pdf)   
  
 ### Mid Term Projects
 
- * Project 01 
- * Project 02 
- * Project 03 
- * Peer Evaluation 
+ * [Project 01](Documents/p1.pdf) 
+ * [Project 02](Documents/p2.pdf)  
+ * [Project 03](Documents/p3.pdf)  
+ * [Peer Evaluation](Documents/eval.docx)  
 
 
 
