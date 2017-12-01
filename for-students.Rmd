@@ -8,10 +8,10 @@ output:
 ---
 ## Office Hours <i class="fa fa-clock-o"></i>
 
-My office is in 340 Walker Hall. Office hours for the spring are TBA. Students may click on [book now](https://lasanthi.youcanbook.me/) to schedule an appointment.
+My office is in 340 Walker Hall. Office hours for the spring are 9:30 - 2:15 on Wednesdays Students may click on [book now](https://lasanthi.youcanbook.me/) to schedule an appointment.
 
 ```{r, echo = FALSE}
-df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15"), Monday = c("Research", "Research", "Research"), Tuesday = c("STT 2810 - 102", "STT 3851 - 101", "STT 2810 - 104"), Wednesday = c("Office", "STT 3850", "STT 3850"), Thursday = c("STT 2810 - 102", "STT 3851 - 101", "STT 2810 - 104"), Friday = c("Research", "Research", "Research"))
+df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15", "12:15-02:15"), Monday = c("Research", "Research", "Research", "Research"), Tuesday = c("STT 2810 - 102", "STT 3851 - 101", "STT 2810 - 104", "Research"), Wednesday = c(" ", "Office", "Office", "Office"), Thursday = c("STT 2810 - 102", "STT 3851 - 101", "STT 2810 - 104", "Research"), Friday = c("Research", "Research", "Research", "Research"))
 knitr::kable(df, align = c("c","c","c","c","c","c"))
 ```
 
