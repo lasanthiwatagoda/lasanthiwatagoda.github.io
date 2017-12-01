@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Statistical Methods II
 
-* Syllabus <http://rmarkdown.rstudio.com>.
+* Syllabus 
 
 * Homework Assignments:
 

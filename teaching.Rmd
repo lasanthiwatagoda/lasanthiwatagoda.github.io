@@ -8,7 +8,7 @@ output: html_document
 
 ## Classes I teach this semester
 
-* [STT 3830](https://asulearn.appstate.edu/)
+* [STT 3830](STT3830Fall2017.html)
 * [STT 2810](https://www.pearsonmylabandmastering.com/northamerica/)
 
 * [AsULearn](https://asulearn.appstate.edu/)
