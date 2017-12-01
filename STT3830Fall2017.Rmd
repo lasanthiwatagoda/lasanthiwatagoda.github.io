@@ -1,0 +1,16 @@
+---
+title: "STT3830"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Statistical Methods II
+
+* Syllabus <http://rmarkdown.rstudio.com>.
+
+* Homework Assignments:
+
