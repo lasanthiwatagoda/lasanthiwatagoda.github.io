@@ -1,37 +1,33 @@
-
-name: "lasanthiwatagoda.github.io"
-output_dir: "."
+name: lasanthiwatagoda.github.io
+output_dir: .
 navbar:
-  title: "Lasanthi Watagoda"
+  title: Lasanthi Watagoda
   left:
-    - text: "For Students"
-      href: for-students.html
-    - text: "Resources"
-      href: resources.html
-    - text: "Teaching"
-      href: teaching.html
-    - text: "Misc. Stats"
-      href: https://alanarnholt.github.io/GeneralStatistics/
-    - text: "Software"
-      href: software.html
-    - text: "Scholarship"
-      href: scholarship.html
-    - text: "Cool Stuff"
-      href: coolstuff.html
-    
+  - text: For Students
+    href: for-students.html
+  - text: Resources
+    href: resources.html
+  - text: Teaching
+    href: teaching.html
+  - text: Software
+    href: software.html
+  - text: Scholarship
+    href: scholarship.html
+  - text: Cool Stuff
+    href: coolstuff.html
   right:
-    - text: ""
-      icon: glyphicon-info-sign
-      href: about.html
-    - icon: fa-github fa-lg
-      href: https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/  
-    
-
+  - text: ''
+    icon: glyphicon-info-sign
+    href: about.html
+  - icon: fa-github fa-lg
+    href: https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/
 output:
   html_document:
     theme: yeti
     highlight: textmate
     include:
       after_body: footer.html
-    css: alans.css  
-      
+    css: alans.css
+    lib_dir: site_libs
+    self_contained: no
+
