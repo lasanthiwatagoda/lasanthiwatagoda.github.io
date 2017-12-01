@@ -10,15 +10,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Statistical Methods II
 
-# [Syllabus](Documents/3830-syllabus-calendar.pdf)
+Welcome to Statistical Methods II. Goal is to become familiar with parametric and non-parametric statistical methods and inferential procedures. Topics include contingency table analysis, analysis of variance, experimental design,
+topics from multiple regression, error rates, and power. We emphasize non-theoretical development of
+statistical techniques and focus in interpretation of results. Statistical software will be utilized in the course.
+Software: **SPSS**, **MINITAB** and **SAS** will be used as the computing packages of this course. Homework may be done
+using these packages.
+
+Download your [Syllabus](Documents/3830-syllabus-calendar.pdf)
+
 
 <figure>
-<img src="./images/Schedule.png" alt="Alan" align="right" hspace="20" style="width:335px;height:400px;">
+<img src="./images/Schedule.png" alt="Alan" align="right" hspace="20" style="width:340px;height:400px;">
 </figure>
 
+### SAS Studio
 
+Click [here](https://odamid.oda.sas.com) and login to SAS studio.
 
-# Homework Assignments:
+### Homework Assignments:
 
 * Homework 01 
 * Homework 02 
@@ -33,7 +42,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Homework 11 
 * Homework 12 
   
-# Technology Tutorials
+### Technology Tutorials
 
  * Minitab Tutorial 
  * R Tutorial 
@@ -41,7 +50,7 @@ knitr::opts_chunk$set(echo = TRUE)
  * SPSS Tutorial 
  
  
-# Mid Term Projects
+### Mid Term Projects
 
  * Project 01 
  * Project 02 
@@ -50,7 +59,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-#Useful Statistical Tables
+### Useful Statistical Tables
  
   * Table D.1 File
   * Table D.2 and D.3 File
