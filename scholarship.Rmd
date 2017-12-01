@@ -2,16 +2,35 @@
 title: "Scholarship"
 output: html_document
 ---
+My research interests lie in the fields of Linear Regression, Variable Selection, Prediction Interval and Bootstraps, and Machine Learning. 
 
-## Books 
+The goal of my recent research work is  to develop methods for inference after variable selection. The regression model uses several predictor variables to 
+predict a response variable. Variable selection attempts to choose a subset of the predictor variables without any important loss of information. A prediction 
+interval gives an interval of reasonable values for a future value of the response variable given fixed values of the predictor variables. 
+
+I am interested in Actuarial science as well. 
 
 
-[_Probability and Statistics with R, Second Edition_](http://alanarnholt.github.io/PASWR2E-Book/)
+## Publications 
 
-[_Probability and Statistics with R_](http://www1.appstate.edu/~arnholta/PASWR/index.htm)
 
-## Grant Work
+* "Bootstrapping analogs of the Hotelling's $T^2$ test,"  Communications in Statistics Theory and Methods, Oct. 17, 2017 with Hasthika Rupasinghe.
 
-* [USFS](https://github.com/alanarnholt/USFS)
+* "Visualizing and Testing the Multivariate Linear Regression Model,"  International Journal of Statistics and Probability, January 22, 2015, with David J Olive, Hasthika Rupasinghe.
 
+* "Inference for Multiple linear Regression after model or variable selection," Annals of Statistics, submitted, with David J Olive. 
+
+* "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method,"   Work in progress, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
+
+* "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
+
+* "Linear Model Fitting For  Undergraduate Students In Non-Statistics Disciplines,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
+
+
+* "Theoretical Sample Sizes for the CLT to Work for Several Distributions,"  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
+
+## Grants
+
+* CAS Research/Proposal Development Summer Grant (Received)
+* Chancellor’s Innovation Scholars Program (Applied)
 * * *
