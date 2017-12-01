@@ -10,8 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Statistical Methods II
 
-
-# [Syllabus](file:///Users/hasthika/Documents/3830-syllabus-calendar.pdf)
+# [Syllabus](Documents/3830-syllabus-calendar.pdf)
 
 <figure>
 <img src="./images/Schedule.png" alt="Alan" align="right" hspace="20" style="width:335px;height:400px;">
@@ -21,18 +20,18 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Homework Assignments:
 
-  * Homework 01 
-  * Homework 02 
-  * Homework 03 
-  * Homework 04 
-  * Homework 05 
-  * Homework 06 
-  * Homework 07 
-  * Homework 08 
-  * Homework 09 
-  * Homework 10 
-  * Homework 11 
-  * Homework 12 
+* Homework 01 
+* Homework 02 
+* Homework 03 
+* Homework 04 
+* Homework 05 
+* Homework 06 
+* Homework 07 
+* Homework 08 
+* Homework 09 
+* Homework 10 
+* Homework 11 
+* Homework 12 
   
 # Technology Tutorials
 
