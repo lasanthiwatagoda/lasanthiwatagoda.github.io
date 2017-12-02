@@ -9,8 +9,6 @@ navbar:
     href: resources.html
   - text: Teaching
     href: teaching.html
-  - text: Software
-    href: software.html
   - text: Scholarship
     href: scholarship.html
   - text: Cool Stuff
