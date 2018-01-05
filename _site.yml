@@ -1,17 +1,17 @@
-name: lasanthiwatagoda.github.io
-output_dir: lasanthiwatagoda.github.io
+name: "lasanthiwatagoda.github.io"
+output_dir: "."
 navbar:
-  title: Lasanthi Watagoda
+  title: "Lasanthi Watagoda"
   left:
-  - text: For Students
+  - text: "For Students"
     href: for-students.html
-  - text: Resources
+  - text: "Resources"
     href: resources.html
-  - text: Teaching
+  - text: "Teaching"
     href: teaching.html
-  - text: Scholarship
+  - text: "Scholarship"
     href: scholarship.html
-  - text: Cool Stuff
+  - text: "Cool Stuff"
     href: coolstuff.html
   right:
   - text: ''
