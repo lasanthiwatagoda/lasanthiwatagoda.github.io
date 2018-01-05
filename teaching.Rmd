@@ -8,7 +8,7 @@ output: html_document
 
 ## Classes I teach this semester
 
-* [STT 3830 - Statistical Methods](STT3830Fall2017.html) 
+* [STT 3851 - Statistical Data Analysis II ](https://lasanthi-asu.github.io/STT3851ClassRepo/) 
 * [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
 * [AsULearn](https://asulearn.appstate.edu/)
@@ -16,6 +16,8 @@ output: html_document
 
 ## Classes I taught in the past
 
+* STT 3830 | [Statistical Methods II](STT3830Fall2017.html) (Fall 2017)
+* STT 2810 | Introduction to Statistics (Fall 2017)
 * MATH 282 | Introduction to Statistics  (Spring 2015 / Spring 2016)
 * MATH 111 | Precalculus   (Fall 2015 )
 * MATH 140 | A Short Course in Calculus  (Summer 2014)
