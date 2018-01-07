@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About me"
 ---
 
 
@@ -7,7 +7,10 @@ title: "About"
 
 <img src="./images/LasWebPic.png" alt="Las" align="left" hspace="20" style="width:85px;height:100px;">
 </figure>
-
+I am a visiting Assistant professor in the department of Mathematical sciences at Appalachian state University. I am from Sri Lanka originally, and after my undergraduate studies at the University of Sri Jayewardenepura, I joined the Master program in the department of Mathematics at Southern Illinois University, Carbondale. 
+I completed my PhD in Mathematics at the same University where my research focused on 
+Statistical learning which is a branch of applied statistics that emerged in response to machine learning, emphasizing statistical models and assessment of uncertainty.
+I often enjoy working with big data sets.
 
 
 
