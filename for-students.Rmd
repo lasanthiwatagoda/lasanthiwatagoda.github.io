@@ -68,7 +68,7 @@ Please visit [The University Writing Center](http://writingcenter.appstate.edu/)
 Summary of 2018 Curriculum Changes & Exam Transitions.
 
 <figure>
-<img src="./images/examchanges.png" alt="Exams" align="center" hspace="20" style="width:350px;height:450px;">
+<img src="./images/examchanges.png" alt="Exams" align="center" hspace="20" style="width:450px;height:550px;">
 </figure>
 
 
