@@ -63,4 +63,13 @@ Please visit [The University Writing Center](http://writingcenter.appstate.edu/)
 
 * Click the [Resources Tab](resources.html)
 
+## Actuarial Science
+
+Summary of 2018 Curriculum Changes & Exam Transitions.
+
+<figure>
+<img src="./images/examchanges.png" alt="Exams" align="center" hspace="20" style="width:350px;height:450px;">
+</figure>
+
+
 * * *
