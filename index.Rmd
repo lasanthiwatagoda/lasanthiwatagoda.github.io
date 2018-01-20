@@ -3,7 +3,7 @@ title: "Welcome!"
 ---
 
 <figure>
-<img src="./images/LasWebPic.png" alt="Alan" align="left" hspace="20" style="width:90px;height:110px;">
+<img src="./images/Lasanthi.jpg" alt="Alan" align="left" hspace="20" style="width:100px;height:120px;">
 </figure>
  
 I received my Ph. D. in Mathematics  from the Department of Mathematics at Southern Illinois University Carbondale in August 2017. 
