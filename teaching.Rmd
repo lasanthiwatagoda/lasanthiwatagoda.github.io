@@ -15,7 +15,7 @@ output: html_document
 * [Miscellaneous Statistics](https://alanarnholt.github.io/GeneralStatistics/)
 
 <figure>
-<img src="./images/strenths.png" alt="strengths" align="right" hspace="20" style="width:340px;height:400px;">
+<img src="./images/strengths.png" alt="strengths" align="right" hspace="20" style="width:400px;height:400px;">
 </figure>
 
 ## Classes I taught in the past
