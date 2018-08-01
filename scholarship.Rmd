@@ -20,8 +20,7 @@ I am interested in Actuarial science as well.
 
 * "Bootstrapping Multiple Linear Regression After Variable Selection,"  submitted, with David J Olive. 
 
-* "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction In-
-tervals," submitted, with David J Olive. 
+* "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
 * "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method,"   Work in progress, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
 
