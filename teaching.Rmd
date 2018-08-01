@@ -3,12 +3,12 @@ title: "Teaching"
 output: html_document
 ---
 
-<i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2017 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
+<i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
 
 ## Classes I teach this semester
 
-* [STT 3851 - Statistical Data Analysis II ](https://lasanthi-asu.github.io/STT3851ClassRepo/) 
+* STT 3830  - Statistical Methods II 
 * [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
 * [AsULearn](https://asulearn.appstate.edu/)
@@ -19,7 +19,7 @@ output: html_document
 </figure>
 
 ## Classes I taught in the past
-
+* STAT 3851 | Statistical Data Analysis II (Spring 2018)
 * STAT 3830 | [Statistical Methods II](STT3830Fall2017.html) (Fall 2017)
 * STAT 2810 | Introduction to Statistics (Fall 2017)
 * MATH 282 | Introduction to Statistics  (Spring 2015 / Spring 2016)
