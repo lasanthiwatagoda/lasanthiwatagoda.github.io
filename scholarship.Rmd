@@ -22,7 +22,7 @@ I am interested in Actuarial science as well.
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
-* "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method,"   Work in progress, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
+* "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method," submitted, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
