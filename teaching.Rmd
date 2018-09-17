@@ -19,7 +19,7 @@ output: html_document
 </figure>
 
 ## Classes I teach  in Spring 2019 
-* [STAT 3851 | Statistical Data Analysis II](Home/git_repositories/STT3851ClassRepo/Assignments/AssignmentsSTT3851Spring2018.html) 
+* [STAT 3851 | Statistical Data Analysis II](STT3851ClassRepo/Assignments/AssignmentsSTT3851Spring2018.html) 
 
 ## Classes I taught in the past
 * STAT 3851 | Statistical Data Analysis II (Spring 2018)
