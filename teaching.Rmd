@@ -6,7 +6,7 @@ output: html_document
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
 
-## Classes I teach this semester
+## Classes I teach this semester (FALL 2018)
 
 * STT 3830  - Statistical Methods II 
 * [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
@@ -17,6 +17,9 @@ output: html_document
 <figure>
 <img src="./images/strengths.png" alt="strengths" align="right" hspace="20" style="width:400px;height:400px;">
 </figure>
+
+## Classes I teach  in Spring 2019 
+* [STAT 3851 | Statistical Data Analysis II](Home/git_repositories/STT3851ClassRepo/Assignments/AssignmentsSTT3851Spring2018.html) 
 
 ## Classes I taught in the past
 * STAT 3851 | Statistical Data Analysis II (Spring 2018)
