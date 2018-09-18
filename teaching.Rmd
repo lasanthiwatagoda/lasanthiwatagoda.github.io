@@ -8,7 +8,7 @@ output: html_document
 
 ## Classes I teach this semester (FALL 2018)
 
-* STT 3830  - Statistical Methods II 
+* [STT 3830  - Statistical Methods II](STT3830Fall2017.html) 
 * [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
 * [AsULearn](https://asulearn.appstate.edu/)

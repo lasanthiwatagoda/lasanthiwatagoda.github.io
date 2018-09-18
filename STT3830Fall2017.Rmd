@@ -1,5 +1,5 @@
 ---
-title: "STT3830"
+title: "STT3830 - Fall 2018"
 
 output: html_document
 ---
@@ -13,8 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Welcome to Statistical Methods II. Goal is to become familiar with parametric and non-parametric statistical methods and inferential procedures. Topics include contingency table analysis, analysis of variance, experimental design,
 topics from multiple regression, error rates, and power. We emphasize non-theoretical development of
 statistical techniques and focus in interpretation of results. Statistical software will be utilized in the course.
-Software: **SPSS**, **MINITAB** and **SAS** will be used as the computing packages of this course. Homework may be done
-using these packages.
+Software: **SPSS**, **MINITAB** and **R** will be used as the computing packages of this course. Homework may be done using these packages. DataCamp will also be used.
 
 Download your [Syllabus](Documents/3830-syllabus-calendar.pdf)
 
