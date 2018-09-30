@@ -22,18 +22,22 @@ I am interested in Actuarial science as well.
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
+* "Examining the $n \geq 30$ is Sufficiently Large Caveat for the Sampling Distribution of $\bar{X} $ to Follow a Normal Distribution, "  submitted, with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
+
 * "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method," submitted, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
+
+* "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
-* "Linear Model Fitting For  Undergraduate Students In Non-Statistics Disciplines,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
 
-* "Theoretical Sample Sizes for the CLT to Work for Several Distributions,"  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
 ## Grants
 
 * CAS Research/Proposal Development Summer Grant (Received)
 * Chancellor’s Innovation Scholars Program (Applied)
+
+<!--* AWM Travel grant (Applied) --> 
 
 ***
