@@ -22,7 +22,7 @@ I am interested in Actuarial science as well.
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
-* "Examining the $n \geq 30$ is Sufficiently Large Caveat for the Sampling Distribution of $\bar{X} $ to Follow a Normal Distribution, "  submitted, with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
+* "Examining the $n \geq 30$ is Sufficiently Large Caveat for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution, "  submitted, with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
 
 * "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method," submitted, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
 
