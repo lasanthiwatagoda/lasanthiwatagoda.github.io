@@ -6,19 +6,19 @@ output: html_document
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
 
-## Classes I teach this semester (FALL 2018)
+##  Fall 2018
 
 * [STT 3830  - Statistical Methods II](STT3830Fall2017.html) 
 * [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
-* [AsULearn](https://asulearn.appstate.edu/)
-* [Miscellaneous Statistics](https://alanarnholt.github.io/GeneralStatistics/)
 
 <figure>
 <img src="./images/strengths.png" alt="strengths" align="right" hspace="20" style="width:400px;height:400px;">
 </figure>
 
-## Classes I teach  in Spring 2019 
+## Spring 2019 
+* [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+
 * [STAT 3851 | Statistical Data Analysis II](https://lasanthi-asu.github.io/STT3851ClassRepo/index.html) 
 
 ## Classes I taught in the past
@@ -39,5 +39,9 @@ output: html_document
 * MATH 282 | Introduction to Statistics (Summer 2017)
 * MATH 108 | College Algebra  (Summer 2015)
 * MATH 139 | Finite Mathematics  (Summer 2017)
+
+
+* [AsULearn](https://asulearn.appstate.edu/)
+* [Miscellaneous Statistics](https://alanarnholt.github.io/GeneralStatistics/)
 
 * * *
