@@ -13,7 +13,7 @@ I am interested in Actuarial science as well.
 
 ## Publications 
 
-* "A Sub-Model Theorem for Ordinary Least Squares" to appear in International Journal of Statistics and Probability January 2019.
+* "A Sub-Model Theorem for Ordinary Least Squares" to appear in International Journal of Statistics and Probability, January 2019.
 
 * "Examining the $n\geq 30$ is Sufficiently Large for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution Caveat"  to appear in Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
 
