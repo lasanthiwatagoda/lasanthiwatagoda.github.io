@@ -13,6 +13,9 @@ I am interested in Actuarial science as well.
 
 ## Publications 
 
+* "A Sub-Model Theorem for Ordinary Least Squares" to appear in International Journal of Statistics and Probability January 2019.
+
+* "Examining the $n\geq 30$ is Sufficiently Large for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution Caveat"  to appear in Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
 
 * "Bootstrapping analogs of the Hotelling's $T^2$ test,"  Communications in Statistics Theory and Methods, Oct. 17, 2017 with Hasthika Rupasinghe.
 
@@ -22,7 +25,7 @@ I am interested in Actuarial science as well.
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
-* "Examining the $n \geq 30$ is Sufficiently Large Caveat for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution, "  submitted, with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
+
 
 * "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method," submitted, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
 
@@ -37,6 +40,7 @@ I am interested in Actuarial science as well.
 
 * CAS Research/Proposal Development Summer Grant (Received)
 * Chancellor’s Innovation Scholars Program (Applied)
+* NSF Grant -Statistics (Work in progress)
 
 <!--* AWM Travel grant (Applied) --> 
 
