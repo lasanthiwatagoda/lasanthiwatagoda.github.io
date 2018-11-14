@@ -15,6 +15,8 @@ navbar:
     href: OnlineTutoring.html
   - text: Cool Stuff
     href: coolstuff.html
+  - text: Student Scholars Day 2019
+    href: SSD.html
   right:
   - text: ''
     icon: glyphicon-info-sign
