@@ -11,12 +11,10 @@ navbar:
     href: teaching.html
   - text: Scholarship
     href: scholarship.html
-  - text: Online Tutoring
-    href: OnlineTutoring.html
-  - text: Cool Stuff
-    href: coolstuff.html
   - text: Student Scholars Day 2019
     href: SSD.html
+  - text: Cool Stuff
+    href: coolstuff.html
   right:
   - text: ''
     icon: glyphicon-info-sign
