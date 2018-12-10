@@ -13,6 +13,8 @@ I am interested in Actuarial science as well.
 
 ## Publications 
 
+* "Sprint Assessment using Machine Learning and a Wearable Accelerometer," to appear in Journal of Applied Biomechanics with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan Needle, Jeffrey M. McBride. 
+
 * ["A Sub-Model Theorem for Ordinary Least Squares"](http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493), International Journal of Statistics and Probability, January 2019.
 
 * "Examining the $n\geq 30$ is Sufficiently Large for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution Caveat"  to appear in Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
@@ -24,10 +26,6 @@ I am interested in Actuarial science as well.
 * "Bootstrapping Multiple Linear Regression After Variable Selection,"  submitted, with David J Olive. 
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
-
-
-
-* "A Machine Learning Approach to Automate an Inertial Sensor Based Sprint Assessment Method," submitted, with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt. 
 
 * "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
