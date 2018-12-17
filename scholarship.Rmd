@@ -31,6 +31,8 @@ I am interested in Actuarial science as well.
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
+* "An approximation to the Skew--Normal Distribution," Work in progress, with Hasthika Rupasinghe, Joel Sanqui.
+
 
 
 
@@ -38,7 +40,7 @@ I am interested in Actuarial science as well.
 
 * [CAS Research/Proposal Development Summer Grant](https://cas.appstate.edu/faculty-staff/faculty-researchproposal-development-summer-grants/2018-summer-grant-recipients) (Received)
 * Chancellor’s Innovation Scholars Program (Applied)
-* NSF Grant -Statistics (Work in progress)
+* NSF Grant -- Statistics (Applied)
 
 <!--* AWM Travel grant (Applied) --> 
 
