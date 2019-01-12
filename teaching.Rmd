@@ -5,21 +5,27 @@ output: html_document
 
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
+## Spring 2019 
 
-##  Fall 2018
+* [STT 3851 | Statistical Data Analysis II](https://lasanthi-asu.github.io/STT3851ClassRepo/index.html) 
+
+
+* [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+
+
+
+
+<!-- ##  Fall 2018
 
 * [STT 3830  - Statistical Methods II](STT3830Fall2017.html) 
-* [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+* [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/) -->
 
 
 <figure>
 <img src="./images/strengths.png" alt="strengths" align="right" hspace="20" style="width:400px;height:400px;">
 </figure>
 
-## Spring 2019 
-* [STT 2810 - Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
-* [STAT 3851 | Statistical Data Analysis II](https://lasanthi-asu.github.io/STT3851ClassRepo/index.html) 
 
 ## Classes I taught in the past
 * STAT 3851 | Statistical Data Analysis II (Spring 2018)
