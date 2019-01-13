@@ -29,14 +29,14 @@ output: html_document
 
 ## Classes I taught in the past
 * STAT 3851 | Statistical Data Analysis II (Spring 2018)
-* STAT 3830 | Statistical Methods II  (Fall 2017)
-* STAT 2810 | Introduction to Statistics (Fall 2017)
-* MATH 282 | Introduction to Statistics  (Spring 2015 / Spring 2016)
-* MATH 111 | Precalculus   (Fall 2015 )
+* STAT 3830 | Statistical Methods II  (Fall 2017, 2018)
+* STAT 2810 | Introduction to Statistics (Fall 2017, 2018/ Spring 2018)
+* MATH 282 | Introduction to Statistics  (Spring 2015, 2016)
+* MATH 111 | Precalculus   (Fall 2015)
 * MATH 140 | A Short Course in Calculus  (Summer 2014)
 * MATH 139 | Finite Mathematics  (Fall 2014)
 * MATH 109 | Trigonometry and Analytic Geometry (Fall 2016)
-* MATH 108 | College Algebra  (Fall 2013/Spring 2014)
+* MATH 108 | College Algebra  (Fall 2013/ Spring 2014)
 
 * MATH 101 | Introduction to Contemporary Mathematics (Paper Base)  (Spring 2013)
 * MATH 113 | Introduction to Contemporary Mathematics (Spring 2012/Fall 2012)
