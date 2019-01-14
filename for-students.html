@@ -33,9 +33,8 @@
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -111,6 +110,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -125,7 +127,6 @@ body {
   padding-top: 50px;
   margin-top: -50px;
 }
-
 .section h2 {
   padding-top: 50px;
   margin-top: -50px;
@@ -145,6 +146,43 @@ body {
 .section h6 {
   padding-top: 50px;
   margin-top: -50px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -166,18 +204,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -345,7 +442,7 @@ div.tocify {
 
 <div id="office-hours" class="section level2">
 <h2>Office Hours <i class="fa fa-clock-o"></i></h2>
-<p>My office is in 340 Walker Hall. Office hours for the Fall are 1.00 P.M. - 03:30 P.M. on Monday and Wednesday Students may click on <a href="https://lasanthi.youcanbook.me/">book now</a> to schedule an appointment.</p>
+<p>My office is in 340 Walker Hall. Office hours for the Spring are Tuesday and Thursday 1pm to 1:50pm and wednesday from 8am to 10am.Students may click on <a href="https://lasanthi.youcanbook.me/">book now</a> to schedule an appointment.</p>
 <table>
 <thead>
 <tr class="header">
@@ -354,65 +451,43 @@ div.tocify {
 <th align="center">Tuesday</th>
 <th align="center">Wednesday</th>
 <th align="center">Thursday</th>
-<th align="center">Friday</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center">09:00-09:50</td>
-<td align="center">STT 2810 - 104</td>
-<td align="center">Re</td>
-<td align="center">STT 2810 - 104</td>
-<td align="center">Re</td>
-<td align="center">STT 2810 - 104</td>
+<td align="center">08:00-09:15</td>
+<td align="center">Research</td>
+<td align="center">STT 2810 - 101</td>
+<td align="center">Office Hours</td>
+<td align="center">STT 2810 - 101</td>
 </tr>
 <tr class="even">
-<td align="center">10:00-10:50</td>
-<td align="center">STT 2810 - 106</td>
-<td align="center">s</td>
-<td align="center">STT 2810 - 106</td>
-<td align="center">s</td>
-<td align="center">STT 2810 - 106</td>
+<td align="center">09:30-10:45</td>
+<td align="center">Research</td>
+<td align="center">STT 2810 - 103</td>
+<td align="center">Office Hours</td>
+<td align="center">STT 2810 - 103</td>
 </tr>
 <tr class="odd">
-<td align="center">11:00-11:50</td>
-<td align="center">Lunch Break</td>
-<td align="center">e</td>
-<td align="center">Lunch Break</td>
-<td align="center">e</td>
-<td align="center">Lunch Break</td>
+<td align="center">11:00-12:15</td>
+<td align="center">Research</td>
+<td align="center">STT 3851 - 101</td>
+<td align="center">Prep</td>
+<td align="center">STT 3851 - 101</td>
 </tr>
 <tr class="even">
-<td align="center">12:00-12:50</td>
-<td align="center">STT 3830 - 101</td>
-<td align="center">a</td>
-<td align="center">STT 3830 - 101</td>
-<td align="center">a</td>
-<td align="center">STT 3830 - 101</td>
+<td align="center">12:15-01:00</td>
+<td align="center">Prep</td>
+<td align="center">Lunch Break</td>
+<td align="center">Prep</td>
+<td align="center">Lunch Break</td>
 </tr>
 <tr class="odd">
 <td align="center">01:00-01:50</td>
+<td align="center">Prep</td>
 <td align="center">Office Hours</td>
-<td align="center">r</td>
+<td align="center">Prep</td>
 <td align="center">Office Hours</td>
-<td align="center">r</td>
-<td align="center">Prep/ Grading</td>
-</tr>
-<tr class="even">
-<td align="center">02:00-02:50</td>
-<td align="center">Office Hours</td>
-<td align="center">c</td>
-<td align="center">Office Hours</td>
-<td align="center">c</td>
-<td align="center">Prep/ Grading</td>
-</tr>
-<tr class="odd">
-<td align="center">03:00-03:30</td>
-<td align="center">Office Hours</td>
-<td align="center">h</td>
-<td align="center">Office Hours</td>
-<td align="center">h</td>
-<td align="center">Prep/ Grading</td>
 </tr>
 </tbody>
 </table>
@@ -425,8 +500,8 @@ Walker Hall
 </figure>
 </center>
 <p>Use the leaflet map below to find Walker Hall.</p>
-<div id="htmlwidget-8aa9e3b8aaa54ef92593" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8aa9e3b8aaa54ef92593">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4903ae5def74505c63f8" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4903ae5def74505c63f8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="important-dates-and-times" class="section level2">
 <h2>Important Dates and Times</h2>

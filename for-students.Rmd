@@ -8,10 +8,10 @@ output:
 ---
 ## Office Hours <i class="fa fa-clock-o"></i>
 
-My office is in 340 Walker Hall. Office hours for the Fall are 1.00 P.M. - 03:30 P.M. on Monday and Wednesday Students may click on [book now](https://lasanthi.youcanbook.me/) to schedule an appointment.
+My office is in 340 Walker Hall. Office hours for the Spring are Tuesday and Thursday 1pm to 1:50pm and wednesday from 8am to 10am.Students may click on [book now](https://lasanthi.youcanbook.me/) to schedule an appointment.
 
 ```{r, echo = FALSE}
-df <- data.frame(Time = c("09:00-09:50", "10:00-10:50", "11:00-11:50", "12:00-12:50","01:00-01:50","02:00-02:50","03:00-03:30"), Monday = c("STT 2810 - 104", "STT 2810 - 106","Lunch Break", "STT 3830 - 101", "Office Hours","Office Hours","Office Hours"), Tuesday = c("Re", "s","e", "a", "r","c", "h"), Wednesday = c("STT 2810 - 104", "STT 2810 - 106","Lunch Break", "STT 3830 - 101", "Office Hours","Office Hours","Office Hours"), Thursday = c("Re", "s","e", "a", "r","c", "h"), Friday = c("STT 2810 - 104", "STT 2810 - 106","Lunch Break", "STT 3830 - 101", "Prep/ Grading","Prep/ Grading","Prep/ Grading"))
+df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15", "12:15-01:00","01:00-01:50"), Monday = c("Research", "Research","Research", "Prep", "Prep"), Tuesday = c("STT 2810 - 101", "STT 2810 - 103","STT 3851 - 101", "Lunch Break", "Office Hours"), Wednesday = c("Office Hours", "Office Hours","Prep", "Prep", "Prep"), Thursday = c("STT 2810 - 101", "STT 2810 - 103","STT 3851 - 101", "Lunch Break", "Office Hours"))
 knitr::kable(df, align = c("c","c","c","c","c","c"))
 ```
 
