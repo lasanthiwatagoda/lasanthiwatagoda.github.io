@@ -15,7 +15,7 @@ I am interested in Actuarial science as well.
 
 * ["Examining the $n\geq 30$ is Sufficiently Large for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution Caveat,"](http://www.seio.es/BBEIO/BEIOVol34Num3/index.html) Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
 
-* "Sprint Assessment using Machine Learning and a Wearable Accelerometer," to appear in Journal of Applied Biomechanics with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan Needle, Jeffrey M. McBride. 
+* ["Sprint Assessment using Machine Learning and a Wearable Accelerometer,"](https://journals.humankinetics.com/doi/10.1123/jab.2018-0107) Journal of Applied Biomechanics with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan Needle, Jeffrey M. McBride. 
 
 * ["A Sub-Model Theorem for Ordinary Least Squares"](http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493), International Journal of Statistics and Probability, January 2019.
 
@@ -29,11 +29,13 @@ I am interested in Actuarial science as well.
 
 * "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
 
+* "An approximation to the Skew--Normal Distribution," submitted, with Hasthika Rupasinghe, Jose A. Sanqui.
+
+
 * "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
-* "An approximation to the Skew--Normal Distribution," Work in progress, with Hasthika Rupasinghe, Joel Sanqui.
 
 
 
