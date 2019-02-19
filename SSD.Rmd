@@ -3,9 +3,17 @@ title: "SSD2019: Student Scholars Day"
 output: html_document
 ---
 
-## About SSD2019
+### About SSD2019
 
+Students can register to give a short talk (15 minutes, including
+questions) or to participate in the poster session (50 minutes). Group
+presentations and posters are welcomed; 
 
+For graduate research presentations, please contact Dr. Watagoda for scheduling in the special
+graduate session. For undergraduate honors thesis presentations,
+
+please contact Dr. Cook for scheduling.
+Last date for presenter registration: Wednesday, April 24
 
 ## Register to present
 
