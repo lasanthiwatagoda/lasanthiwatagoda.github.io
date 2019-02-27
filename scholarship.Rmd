@@ -32,7 +32,7 @@ I am interested in Actuarial science as well.
 * "An approximation to the Skew--Normal Distribution," submitted, with Hasthika Rupasinghe, Jose A. Sanqui.
 
 
-* "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
+* "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
