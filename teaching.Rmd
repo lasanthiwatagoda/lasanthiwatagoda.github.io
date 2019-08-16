@@ -7,6 +7,13 @@ output: html_document
 
 ## Spring 2019 
 
+* [STT 3250 | Probability](https://lasanthiwatagoda.github.io/STT3250Fall2019ClassRepo/index.html) 
+
+* [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+
+
+## Spring 2019 
+
 * [STT 3851 | Statistical Data Analysis II](https://lasanthi-asu.github.io/STT3851ClassRepo/index.html) 
 
 
