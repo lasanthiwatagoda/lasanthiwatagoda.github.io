@@ -1,0 +1,17 @@
+---
+title: "Actuarial Science Program"
+output: html_document
+---
+
+
+
+Appalachian offers an actuarial science major (not just a concentration). Appalachian’s program is the only major in the University of North Carolina system designed completely from the bottom up to prepare students to be actuaries.  It is housed in the [Department of Mathematical Sciences](https://mathsci.appstate.edu/).
+
+##Related links
+
+  * Find out more from the official [Actuarial Science webpage](https://mathsci.appstate.edu/academics/undergraduate-programs/actuarial-science.)
+  * [Actuarial Science club](https://orgsync.com/126391/chapter)
+
+
+
+***
