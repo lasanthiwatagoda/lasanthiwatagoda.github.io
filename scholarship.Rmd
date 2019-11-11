@@ -12,16 +12,15 @@ I am interested in Actuarial science as well.
 
 
 ## Publications 
+* ["A cosine approximation to the skew normal distribution"](http://www.m-hikari.com/imf/imf-2019/5-8-2019/9939.html3), International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui
 
 * ["Bootstrapping Multiple Linear Regression After Variable Selection,"](https://urldefense.proofpoint.com/v2/url?u=http-3A__links.springernature.com_f_a_x0ZB10SmA6gdKsY8y8N-2D0w-7E-7E_AABE5gA-7E_RgRek5TSP0QwaHR0cDovL3d3dy5zcHJpbmdlci5jb20vLS8zL0FXb1l6Q1UyMDBhN21nTVg3Z3lzVwNzcGNCCgAAUmGyXDBnzudSDmRvbGl2ZUBzaXUuZWR1WAQAAAbn&d=DwMFaQ&c=jrLYy3FV6j9HoN3FfGW-SLJoSRpiMyAzztY4B1tagEk&r=g5_oslGJ_XAZglOKV1oObQ&m=7GCPdd2Ig5VZE1DqMN8g2xZIEJeTfUH2ngBcqzJT4qQ&s=6_Rn0ynHPiAE4EkoWtewv7kG21JJitl-3HaQ3ijqOWk&e=>) Statistical Papers, April 2019 with David J Olive. 
+
+* ["A Sub-Model Theorem for Ordinary Least Squares"](http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493), International Journal of Statistics and Probability, January 2019.
 
 * ["Examining the $n\geq 30$ is Sufficiently Large for the Sampling Distribution of $\bar{X}$ to Follow a Normal Distribution Caveat,"](http://www.seio.es/BBEIO/BEIOVol34Num3/index.html) Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe. 
 
 * ["Sprint Assessment using Machine Learning and a Wearable Accelerometer,"](https://journals.humankinetics.com/doi/10.1123/jab.2018-0107) Journal of Applied Biomechanics, 2018  with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan Needle, Jeffrey M. McBride. 
-
-* ["A Sub-Model Theorem for Ordinary Least Squares"](http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493), International Journal of Statistics and Probability, January 2019.
-
-
 
 * ["Bootstrapping analogs of the Hotelling's $T^2$ test,"](https://www.tandfonline.com/doi/abs/10.1080/03610926.2017.1337146) Communications in Statistics Theory and Methods, Oct. 17, 2017 with Hasthika Rupasinghe.
 
@@ -29,16 +28,14 @@ I am interested in Actuarial science as well.
 
 
 
-* "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," submitted, with David J Olive. 
-
-* "An approximation to the Skew--Normal Distribution," submitted, with Hasthika Rupasinghe, Jose A. Sanqui.
+* "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," under review, with David J Olive. 
 
 
 * "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
 * "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
 
-
+* " Large sample Bootstarp Prediction Intervals for Variable Selection Estimators." Work in progress, with  Hasthika Rupasinghe. 
 
 
 
