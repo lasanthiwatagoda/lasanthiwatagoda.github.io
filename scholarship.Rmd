@@ -12,7 +12,7 @@ I am interested in Actuarial science as well.
 
 
 ## Publications 
-* ["A cosine approximation to the skew normal distribution"](http://www.m-hikari.com/imf/imf-2019/5-8-2019/9939.html3), International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui
+* ["A cosine approximation to the skew normal distribution"](http://www.m-hikari.com/imf/imf-2019/5-8-2019/p/rupasingheIMF5-8-2019.pdf), International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui
 
 * ["Bootstrapping Multiple Linear Regression After Variable Selection,"](https://urldefense.proofpoint.com/v2/url?u=http-3A__links.springernature.com_f_a_x0ZB10SmA6gdKsY8y8N-2D0w-7E-7E_AABE5gA-7E_RgRek5TSP0QwaHR0cDovL3d3dy5zcHJpbmdlci5jb20vLS8zL0FXb1l6Q1UyMDBhN21nTVg3Z3lzVwNzcGNCCgAAUmGyXDBnzudSDmRvbGl2ZUBzaXUuZWR1WAQAAAbn&d=DwMFaQ&c=jrLYy3FV6j9HoN3FfGW-SLJoSRpiMyAzztY4B1tagEk&r=g5_oslGJ_XAZglOKV1oObQ&m=7GCPdd2Ig5VZE1DqMN8g2xZIEJeTfUH2ngBcqzJT4qQ&s=6_Rn0ynHPiAE4EkoWtewv7kG21JJitl-3HaQ3ijqOWk&e=>) Statistical Papers, April 2019 with David J Olive. 
 
