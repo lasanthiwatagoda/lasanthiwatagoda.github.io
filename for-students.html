@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -26,14 +25,14 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -98,7 +97,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -247,6 +245,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -275,6 +274,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -408,7 +413,8 @@ div.tocify {
 
 <div id="office-hours" class="section level2">
 <h2>Office Hours <i class="fa fa-clock-o"></i></h2>
-<p>My office is in 340 Walker Hall. Office hours for the Spring are Tuesday and Thursday 1pm to 1:50pm and wednesday from 8am to 10am.Students may click on <a href="https://lasanthi.youcanbook.me/">book now</a> to schedule an appointment.</p>
+<p><font size="5"> <span style="color:purple;"> Professors value them, students sample them, and technology expands them</span> </font> <font size="1"> The Harvard Gazette </font></p>
+<p>Office hours arrangement: No appointment necessary during regularly scheduled hours. Individual meetings are scheduled by appointment via email. Use <a href="https://lasanthi.youcanbook.me/">book now</a> to book several individual meetings.</p>
 <table>
 <thead>
 <tr class="header">
@@ -423,36 +429,36 @@ div.tocify {
 <tr class="odd">
 <td align="center">08:00-09:15</td>
 <td align="center">Research</td>
-<td align="center">STT 2810 - 101</td>
-<td align="center">Office Hours</td>
-<td align="center">STT 2810 - 101</td>
+<td align="center">STT 2810 - 108</td>
+<td align="center">Prep</td>
+<td align="center">STT 2810 - 108</td>
 </tr>
 <tr class="even">
 <td align="center">09:30-10:45</td>
 <td align="center">Research</td>
-<td align="center">STT 2810 - 103</td>
-<td align="center">Office Hours</td>
-<td align="center">STT 2810 - 103</td>
+<td align="center">STT 4880 - 101</td>
+<td align="center">Prep</td>
+<td align="center">STT 4880 - 101</td>
 </tr>
 <tr class="odd">
 <td align="center">11:00-12:15</td>
 <td align="center">Research</td>
-<td align="center">STT 3851 - 101</td>
-<td align="center">Prep</td>
-<td align="center">STT 3851 - 101</td>
+<td align="center">STT 2810 - 109</td>
+<td align="center">Research</td>
+<td align="center">STT 2810 - 109</td>
 </tr>
 <tr class="even">
 <td align="center">12:15-01:00</td>
-<td align="center">Prep</td>
 <td align="center">Lunch Break</td>
-<td align="center">Prep</td>
+<td align="center">Lunch Break</td>
+<td align="center">Lunch Break</td>
 <td align="center">Lunch Break</td>
 </tr>
 <tr class="odd">
-<td align="center">01:00-01:50</td>
+<td align="center">01:00-03:00</td>
 <td align="center">Prep</td>
 <td align="center">Office Hours</td>
-<td align="center">Prep</td>
+<td align="center">Research</td>
 <td align="center">Office Hours</td>
 </tr>
 </tbody>
@@ -466,8 +472,8 @@ Walker Hall
 </figure>
 </center>
 <p>Use the leaflet map below to find Walker Hall.</p>
-<div id="htmlwidget-8aa9e3b8aaa54ef92593" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8aa9e3b8aaa54ef92593">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-80cef6b79deb04c29279" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-80cef6b79deb04c29279">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="important-dates-and-times" class="section level2">
 <h2>Important Dates and Times</h2>

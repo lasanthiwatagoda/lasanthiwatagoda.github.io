@@ -6,12 +6,20 @@ output:
     toc_float:
       collapsed: false
 ---
+
+
 ## Office Hours <i class="fa fa-clock-o"></i>
 
-My office is in 340 Walker Hall. Office hours for the Spring are Tuesday and Thursday 1pm to 1:50pm and wednesday from 8am to 10am.Students may click on [book now](https://lasanthi.youcanbook.me/) to schedule an appointment.
+<font size="5"> <span style="color:purple;"> Professors value them, students sample them, and technology expands them</span> </font>    <font size="1"> The Harvard Gazette </font> 
+
+
+
+Office hours arrangement: No appointment necessary during regularly scheduled hours. Individual meetings are scheduled by appointment via email. Use [book now](https://lasanthi.youcanbook.me/)  to book several individual meetings.
+
+
 
 ```{r, echo = FALSE}
-df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15", "12:15-01:00","01:00-01:50"), Monday = c("Research", "Research","Research", "Prep", "Prep"), Tuesday = c("STT 2810 - 101", "STT 2810 - 103","STT 3851 - 101", "Lunch Break", "Office Hours"), Wednesday = c("Office Hours", "Office Hours","Prep", "Prep", "Prep"), Thursday = c("STT 2810 - 101", "STT 2810 - 103","STT 3851 - 101", "Lunch Break", "Office Hours"))
+df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15", "12:15-01:00","01:00-03:00"), Monday = c("Research", "Research","Research", "Lunch Break", "Prep"), Tuesday = c("STT 2810 - 108", "STT 4880 - 101","STT 2810 - 109", "Lunch Break", "Office Hours"), Wednesday = c("Prep", "Prep","Research", "Lunch Break", "Research"), Thursday = c("STT 2810 - 108", "STT 4880 - 101","STT 2810 - 109", "Lunch Break", "Office Hours"))
 knitr::kable(df, align = c("c","c","c","c","c","c"))
 ```
 
