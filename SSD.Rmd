@@ -1,9 +1,9 @@
 ---
-title: "SSD2019: Student Scholars Day"
+title: "SSD2020: Student Scholars Day"
 output: html_document
 ---
 
-### About SSD2019
+### About SSD2020
 
 Students can register to give a short talk (15 minutes, including
 questions) or to participate in the poster session (50 minutes). Group
