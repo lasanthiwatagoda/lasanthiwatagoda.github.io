@@ -6,13 +6,19 @@ output: html_document
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
 
-## Fall 2020
+### Fall 2020
 
 * [STT 4830 |Linear Regression Models]()
 
 * [STT 4831 | Linear Regression Models Capstone]()
 
 * [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+
+### Spring 2021
+
+* [STT 3250  |Introduction to Probability]
+
+* [STT 3851 | Statistical Data Analysis II]
 
 <!--## 
 * [STT 4880 | Mathematical Statistics](https://lasanthiwatagoda.github.io/STT4880SP2020ClassRepo/index.html) 
@@ -47,7 +53,7 @@ output: html_document
 
 
 
-## Recent Courses
+### Recent Courses
 
 * STT4880  | Mathematical Statistics (Spring 2020)
 
