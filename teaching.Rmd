@@ -5,17 +5,20 @@ output: html_document
 
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
-## Spring 2019
 
-<!--## 
-* [STT 4880 | Mathematical Statistics](https://lasanthiwatagoda.github.io/STT4880SP2020ClassRepo/index.html) 
--->
+## Fall 2020
 
-* [STT 4880 | Mathematical Statistics]() 
+* [STT 4830 |Linear Regression Models]()
 
+* [STT 4831 | Linear Regression Models Capstone]()
 
 * [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
+<!--## 
+* [STT 4880 | Mathematical Statistics](https://lasanthiwatagoda.github.io/STT4880SP2020ClassRepo/index.html) 
+
+* [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+-->
 <!--## Fall 2019 
 
 * [STT 3250 | Probability](https://lasanthiwatagoda.github.io/STT3250Fall2019ClassRepo/index.html) 
@@ -44,14 +47,19 @@ output: html_document
 
 
 
-## Classes I taught in the past
+## Recent Courses
+
+* STT4880  | Mathematical Statistics (Spring 2020)
+
 * STT 3250 | Introduction to Probability (Fall 2019)
+
+* MAT 4510 | Senior Honors Thesis (Spring 2019)
 
 * STT 3851 | Statistical Data Analysis II (Spring 2018,Spring 2019)
 
 * STT 3830 | Statistical Methods II  (Fall 2017,Fall 2018)
 
-* STT 2810 | Introduction to Statistics (Fall 2017, 2018, 2019/ Spring 2018, 2019)
+* STT 2810 | Introduction to Statistics (Fall 2017, 2018, 2019, 2020/ Spring 2018, 2019)
 
 * MATH 282 | Introduction to Statistics  (Spring 2015, 2016)
 
