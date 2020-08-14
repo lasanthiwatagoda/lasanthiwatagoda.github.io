@@ -8,9 +8,9 @@ output: html_document
 
 ### Fall 2020
 
-* [STT 4830 |Linear Regression Models]()
+* [STT 4830 |Linear Regression Models](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
 
-* [STT 4831 | Linear Regression Models Capstone]()
+* [STT 4831 | Linear Regression Models Capstone](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
 
 * [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
