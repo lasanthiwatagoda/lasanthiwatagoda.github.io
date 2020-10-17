@@ -12,7 +12,11 @@ I am interested in Actuarial science as well.
 
 
 ## Publications 
-* ["A cosine approximation to the skew normal distribution"](http://www.m-hikari.com/imf/imf-2019/5-8-2019/p/rupasingheIMF5-8-2019.pdf), International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui
+
+* ["Comparing six shrinkage estimators with large sample theory and asymptotically optimal prediction intervals"](https://link.springer.com/epdf/10.1007/s00362-020-01193-1?sharing_token=IEVJ9SMhkoOgX17zctDLJ_e4RwlQNchNByi7wbcMAY46pL_c3OcMFScOQnjarxhMVLyOnuYO-yd1p6ruHghLNsnbMpg_r52zvFhxZgMu0V0j66kol8YiTW0wZH-IPwA0aK-7xCC_XEDTtEy740OT3VrTkwzrwN2c7roi-Lk9Pug%3D), Statistical Papers, June 2020 with David J Olive. 
+
+
+* ["A cosine approximation to the skew normal distribution"](http://www.m-hikari.com/imf/imf-2019/5-8-2019/p/rupasingheIMF5-8-2019.pdf), International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui.
 
 * ["Bootstrapping Multiple Linear Regression After Variable Selection,"](https://urldefense.proofpoint.com/v2/url?u=http-3A__links.springernature.com_f_a_x0ZB10SmA6gdKsY8y8N-2D0w-7E-7E_AABE5gA-7E_RgRek5TSP0QwaHR0cDovL3d3dy5zcHJpbmdlci5jb20vLS8zL0FXb1l6Q1UyMDBhN21nTVg3Z3lzVwNzcGNCCgAAUmGyXDBnzudSDmRvbGl2ZUBzaXUuZWR1WAQAAAbn&d=DwMFaQ&c=jrLYy3FV6j9HoN3FfGW-SLJoSRpiMyAzztY4B1tagEk&r=g5_oslGJ_XAZglOKV1oObQ&m=7GCPdd2Ig5VZE1DqMN8g2xZIEJeTfUH2ngBcqzJT4qQ&s=6_Rn0ynHPiAE4EkoWtewv7kG21JJitl-3HaQ3ijqOWk&e=>) Statistical Papers, April 2019 with David J Olive. 
 
@@ -28,12 +32,9 @@ I am interested in Actuarial science as well.
 
 #### Under review and Work in Progress
 
-* "Comparing Shrinkage Estimators With Asymptotically Optimal Prediction Intervals," under review, with David J Olive. 
-
-
 * "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
-* "A new regularization and variable selection technique - HRLR."  Work in progress, with Alan Arnholt, Hasthika Rupasinghe. 
+* "A new regularization and variable selection technique - HRLR." submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
 * " Large sample Bootstarp Prediction Intervals for Variable Selection Estimators." Work in progress, with  Hasthika Rupasinghe. 
 
