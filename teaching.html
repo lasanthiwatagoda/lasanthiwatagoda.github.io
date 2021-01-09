@@ -25,6 +25,15 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -69,6 +78,7 @@ h6 {
   text-align: left;
 }
 </style>
+
 
 <link rel="stylesheet" href="alans.css" type="text/css" />
 
@@ -303,7 +313,7 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -322,18 +332,19 @@ $(document).ready(function () {
 
 
 <p><i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i></p>
-<div id="fall-2020" class="section level3">
-<h3>Fall 2020</h3>
-<ul>
-<li><p><a href="https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html">STT 4830 |Linear Regression Models</a></p></li>
-<li><p><a href="https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html">STT 4831 | Linear Regression Models Capstone</a></p></li>
-<li><p><a href="https://www.pearsonmylabandmastering.com/northamerica/">STT 2810 | Introduction to Statistics</a></p></li>
-</ul>
-</div>
+<!--
+### Fall 2020
+
+* [STT 4830 |Linear Regression Models](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
+
+* [STT 4831 | Linear Regression Models Capstone](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
+
+* [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
+-->
 <div id="spring-2021" class="section level3">
 <h3>Spring 2021</h3>
 <ul>
-<li><p>[STT 3250 |Introduction to Probability]</p></li>
+<li><p><a href="https://lasanthiwatagoda.github.io/STT3250Sring2021/index.html">STT 3250 |Introduction to Probability</a></p></li>
 <li><p>[STT 3851 | Statistical Data Analysis II]</p></li>
 </ul>
 <!--## 
@@ -362,6 +373,7 @@ $(document).ready(function () {
 <div id="recent-courses" class="section level3">
 <h3>Recent Courses</h3>
 <ul>
+<li><p>STT4830 | Linear Regression Models (Fall 2020)</p></li>
 <li><p>STT4880 | Mathematical Statistics (Spring 2020)</p></li>
 <li><p>STT 3250 | Introduction to Probability (Fall 2019)</p></li>
 <li><p>MAT 4510 | Senior Honors Thesis (Spring 2019)</p></li>
@@ -384,7 +396,7 @@ $(document).ready(function () {
 <li><p>MATH 282 | Introduction to Statistics (Summer 2017)</p></li>
 <li><p>MATH 108 | College Algebra (Summer 2015)</p></li>
 <li><p>MATH 139 | Finite Mathematics (Summer 2017)</p></li>
-<li><a href="https://asulearn.appstate.edu/">AsULearn</a></li>
+<li><p><a href="https://asulearn.appstate.edu/">AsULearn</a></p></li>
 <li><p><a href="https://alanarnholt.github.io/GeneralStatistics/">Miscellaneous Statistics</a></p></li>
 </ul>
 <hr />
@@ -419,7 +431,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
