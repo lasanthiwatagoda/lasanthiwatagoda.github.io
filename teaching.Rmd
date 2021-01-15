@@ -15,13 +15,15 @@ output: html_document
 * [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 -->
 
+***
+
 ### Spring 2021
 
 * [STT 3250  |Introduction to Probability](https://lasanthiwatagoda.github.io/STT3250Sring2021/index.html)
 
-* [STT 3851 | Statistical Data Analysis II]
+* [STT 3851 | Statistical Data Analysis II](https://lasanthi-asu.github.io/STT3851ClassRepo/index.html) 
 
-
+***
 
 <!--## 
 * [STT 4880 | Mathematical Statistics](https://lasanthiwatagoda.github.io/STT4880SP2020ClassRepo/index.html) 
