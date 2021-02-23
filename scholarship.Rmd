@@ -11,7 +11,12 @@ interval gives an interval of reasonable values for a future value of the respon
 I am interested in Actuarial science as well. 
 
 
-## Publications 
+## Publications
+
+
+
+* ["Advertisement for Predictive Model Building,"](https://stat-ata-asu.github.io/PredictiveModelBuilding/index.html) Conference Proceedings, 32nd Annual International Conference on Technology in Collegiate Mathematics (ICTCM), with Alan Arnholt, Hasthika Rupasinghe.
+
 
 * ["Comparing six shrinkage estimators with large sample theory and asymptotically optimal prediction intervals"](https://link.springer.com/epdf/10.1007/s00362-020-01193-1?sharing_token=IEVJ9SMhkoOgX17zctDLJ_e4RwlQNchNByi7wbcMAY46pL_c3OcMFScOQnjarxhMVLyOnuYO-yd1p6ruHghLNsnbMpg_r52zvFhxZgMu0V0j66kol8YiTW0wZH-IPwA0aK-7xCC_XEDTtEy740OT3VrTkwzrwN2c7roi-Lk9Pug%3D), Statistical Papers, June 2020 with David J Olive. 
 
@@ -32,11 +37,13 @@ I am interested in Actuarial science as well.
 
 #### Under review and Work in Progress
 
-* "A Unified Introduction to Predictive Model Building for Undergraduate Researches,"   submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
-* "A new regularization and variable selection technique - HRLR." submitted, with Alan Arnholt, Hasthika Rupasinghe. 
+* "HRLR Regression" submitted, with Alan Arnholt, Hasthika Rupasinghe. 
 
-* " Large sample Bootstarp Prediction Intervals for Variable Selection Estimators." Work in progress, with  Hasthika Rupasinghe. 
+* "Large Sample Bootstrap Prediction Intervals for Variable Selection or Shrinkage Estimators" submitted, with Hasthika Rupasinghe.  
+* "Bootstrap Prediction Regions for Multivariate Regression" Work in progress with Hasthika Rupasinghe.
+
+
 
 
 

@@ -19,8 +19,8 @@ Office hours arrangement: No appointment necessary during regularly scheduled ho
 
 
 ```{r, echo = FALSE}
-df <- data.frame(Time = c("08:00-09:15", "09:30-10:45", "11:00-12:15", "12:15-01:00","01:00-03:00"), Monday = c("Research", "Research","Research", "Lunch Break", "Prep"), Tuesday = c("STT 2810 - 108", "STT 4880 - 101","STT 2810 - 109", "Lunch Break", "Office Hours"), Wednesday = c("Prep", "Prep","Research", "Lunch Break", "Research"), Thursday = c("STT 2810 - 108", "STT 4880 - 101","STT 2810 - 109", "Lunch Break", "Office Hours"))
-knitr::kable(df, align = c("c","c","c","c","c","c"))
+df <- data.frame(Time = c( "09:30-10:45", "11:00-12:15", "12:30-01:45","02:00-03:00"), Monday = c("Research", "Research", "LunchBreak","Prep"), Tuesday = c( "STT 3851", "Lunch Break", "STT3250", "Office Hours"), Wednesday = c("Prep", "STT3250", "Office Hours",""), Thursday = c("STT 3851", "Lunch Break", "STT3250", "Office Hours"))
+knitr::kable(df, align = c("c","c","c","c","c"))
 ```
 
 
