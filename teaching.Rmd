@@ -5,6 +5,16 @@ output: html_document
 
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
+### Fall 2022
+
+* [STT 4830 |Linear Regression Models](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
+
+* [STT 4831 | Linear Regression Models Capstone Capstone](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
+
+* [STT 5831 | Linear Regression Models: Gradute Section](https://lasanthiwatagoda.github.io/STT4830ClassRepo/index.html)
+
+
+<!--
 
 ### Fall 2021
 
@@ -14,7 +24,7 @@ output: html_document
 
 * [STT 2820 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
-<!--
+
 
 ### Fall 2020
 

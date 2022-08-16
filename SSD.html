@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -251,6 +254,75 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
 
 </head>
 
@@ -258,6 +330,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -287,7 +369,7 @@ $(document).ready(function () {
   <a href="scholarship.html">Scholarship</a>
 </li>
 <li>
-  <a href="SSD.html">Student Scholars Day 2019</a>
+  <a href="SSD.html">Student Scholars Day</a>
 </li>
 <li>
   <a href="coolstuff.html">Cool Stuff</a>
@@ -316,20 +398,36 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">SSD2020: Student Scholars Day</h1>
+<h1 class="title toc-ignore"><strong>SSD2020: Student Scholars Day</strong></h1>
 
 </div>
 
 
-<div id="about-ssd2020" class="section level3">
-<h3>About SSD2020</h3>
-<p>Students can register to give a short talk (15 minutes, including questions) or to participate in the poster session (50 minutes). Group presentations and posters are welcomed;</p>
-<p>For graduate research presentations, please contact Dr. Watagoda for scheduling in the special graduate session. For undergraduate honors thesis presentations,</p>
-<p>please contact Dr. Cook for scheduling. Last date for presenter registration: Wednesday, April 24</p>
+<div id="about-ssd2020" class="section level2">
+<h2>About SSD2020</h2>
+<p>Our third annual Student Scholars Day (SSD 2020) is scheduled for Saturday, April 25, 2020.</p>
+<p>This annual event highlights the breadth and depth of scholarly research and creative activity conducted by our own undergraduate and graduate students.</p>
+<p>The Student Scholars Day is an exciting day to learn about, explore and appreciate the efforts that students and faculty have put into a wide variety of research and creative activity projects across disciplines of Mathematics, Statistics, Math Education and Actuarial Science.</p>
+<p>The program is attended by peers of the participating students as well as faculty, staff and family members of the presenters.</p>
+<p>Students can participate in a number of ways:</p>
+<ul>
+<li>Oral Presentation (Including Honors and Master’s Thesis)</li>
+<li>Poster Presentation</li>
+<li>Sharing Internship Experience<br />
+</li>
+<li>Sharing Experience about competitions that they have took part in.</li>
+</ul>
+<p>Students can register to give a short talk (25 minutes, including questions) or to participate in the poster session (50 minutes).</p>
+<p>Group presentations and posters are also welcomed.</p>
+<p>Registration is open now!</p>
+<p>Last date for presenter registration: Monday, April 20</p>
 </div>
 <div id="register-to-present" class="section level2">
 <h2>Register to present</h2>
 <p>Fill out the <a href="https://goo.gl/forms/5TDegJoTEoY6oetC3">registration form</a> to register as a presenter.</p>
+</div>
+<div id="past-conference-abstracts" class="section level2">
+<h2>Past Conference abstracts</h2>
 <p><a href="ssd_2019talks.pdf">2019 Presentations</a></p>
 <hr />
 </div>
@@ -356,6 +454,8 @@ $(document).ready(function () {
 </div>
 
 
+</div>
+</div>
 
 </div>
 
@@ -388,6 +488,32 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

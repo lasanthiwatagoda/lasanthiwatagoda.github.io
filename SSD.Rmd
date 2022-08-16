@@ -1,23 +1,51 @@
 ---
-title: "SSD2020: Student Scholars Day"
-output: html_document
+title: "**SSD2020: Student Scholars Day**"
+output: 
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
 ---
 
-### About SSD2020
 
-Students can register to give a short talk (15 minutes, including
-questions) or to participate in the poster session (50 minutes). Group
-presentations and posters are welcomed; 
+## About SSD2020
 
-For graduate research presentations, please contact Dr. Watagoda for scheduling in the special
-graduate session. For undergraduate honors thesis presentations,
+Our third annual Student Scholars Day (SSD 2020) is scheduled for Saturday, April 25, 2020.  
 
-please contact Dr. Cook for scheduling.
-Last date for presenter registration: Wednesday, April 24
+
+
+This annual event highlights the breadth and depth of scholarly research and creative activity conducted by our own undergraduate and graduate  students. 
+
+
+
+The Student Scholars Day is  an exciting day to learn about, explore and appreciate the efforts that students and faculty have put into a wide variety of research and creative activity projects across disciplines of Mathematics, Statistics, Math Education and Actuarial Science.
+
+
+
+The program is attended by peers of the participating students as well as faculty, staff and  family members of the presenters.
+
+
+Students can participate in a number of ways:
+
+  * Oral Presentation (Including Honors and Master's Thesis)
+  * Poster Presentation 
+  * Sharing  Internship Experience  
+  * Sharing Experience about competitions that they have took part in.
+  
+
+Students can register to give a short talk (25 minutes, including questions) or to participate in the poster session (50 minutes). 
+
+Group presentations and posters are also welcomed.
+
+Registration is open now!
+
+Last date for presenter registration: Monday, April 20
 
 ## Register to present
 
 Fill out the [registration form](https://goo.gl/forms/5TDegJoTEoY6oetC3) to register as a presenter.
+
+## Past Conference abstracts
 
 [2019 Presentations](ssd_2019talks.pdf)
 
