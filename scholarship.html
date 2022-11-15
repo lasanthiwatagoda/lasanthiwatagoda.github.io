@@ -13,7 +13,8 @@
 
 <title>Scholarship</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.18/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -58,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="alans.css" type="text/css" />
 
 
@@ -82,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -139,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -172,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -181,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -234,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -272,7 +274,7 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/">
-    <span class="fas fa-github fa-lg"></span>
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -290,36 +292,88 @@ $(document).ready(function () {
 </div>
 
 
-<p>My research interests lie in the fields of Linear Regression, Variable Selection, Prediction Interval and Bootstraps, and Machine Learning.</p>
-<p>The goal of my recent research work is to develop methods for inference after variable selection. The regression model uses several predictor variables to predict a response variable. Variable selection attempts to choose a subset of the predictor variables without any important loss of information. A prediction interval gives an interval of reasonable values for a future value of the response variable given fixed values of the predictor variables.</p>
+<p>My research interests lie in the fields of Linear Regression,
+Variable Selection, Prediction Interval and Bootstraps, and Machine
+Learning.</p>
+<p>The goal of my recent research work is to develop methods for
+inference after variable selection. The regression model uses several
+predictor variables to predict a response variable. Variable selection
+attempts to choose a subset of the predictor variables without any
+important loss of information. A prediction interval gives an interval
+of reasonable values for a future value of the response variable given
+fixed values of the predictor variables.</p>
 <p>I am interested in Actuarial science as well.</p>
 <div id="publications" class="section level2">
 <h2>Publications</h2>
 <ul>
-<li><p><a href="https://stat-ata-asu.github.io/PredictiveModelBuilding/index.html">“Advertisement for Predictive Model Building,”</a> Conference Proceedings, 32nd Annual International Conference on Technology in Collegiate Mathematics (ICTCM), with Alan Arnholt, Hasthika Rupasinghe.</p></li>
-<li><p><a href="https://link.springer.com/epdf/10.1007/s00362-020-01193-1?sharing_token=IEVJ9SMhkoOgX17zctDLJ_e4RwlQNchNByi7wbcMAY46pL_c3OcMFScOQnjarxhMVLyOnuYO-yd1p6ruHghLNsnbMpg_r52zvFhxZgMu0V0j66kol8YiTW0wZH-IPwA0aK-7xCC_XEDTtEy740OT3VrTkwzrwN2c7roi-Lk9Pug%3D">“Comparing six shrinkage estimators with large sample theory and asymptotically optimal prediction intervals”</a>, Statistical Papers, June 2020 with David J Olive.</p></li>
-<li><p><a href="http://www.m-hikari.com/imf/imf-2019/5-8-2019/p/rupasingheIMF5-8-2019.pdf">“A cosine approximation to the skew normal distribution”</a>, International Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige Don, Jose Almer T. Sanqui.</p></li>
-<li><p><a href="https://urldefense.proofpoint.com/v2/url?u=http-3A__links.springernature.com_f_a_x0ZB10SmA6gdKsY8y8N-2D0w-7E-7E_AABE5gA-7E_RgRek5TSP0QwaHR0cDovL3d3dy5zcHJpbmdlci5jb20vLS8zL0FXb1l6Q1UyMDBhN21nTVg3Z3lzVwNzcGNCCgAAUmGyXDBnzudSDmRvbGl2ZUBzaXUuZWR1WAQAAAbn&amp;d=DwMFaQ&amp;c=jrLYy3FV6j9HoN3FfGW-SLJoSRpiMyAzztY4B1tagEk&amp;r=g5_oslGJ_XAZglOKV1oObQ&amp;m=7GCPdd2Ig5VZE1DqMN8g2xZIEJeTfUH2ngBcqzJT4qQ&amp;s=6_Rn0ynHPiAE4EkoWtewv7kG21JJitl-3HaQ3ijqOWk&amp;e=%3E">“Bootstrapping Multiple Linear Regression After Variable Selection,”</a> Statistical Papers, April 2019 with David J Olive.</p></li>
-<li><p><a href="http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493">“A Sub-Model Theorem for Ordinary Least Squares”</a>, International Journal of Statistics and Probability, January 2019.</p></li>
-<li><p><a href="http://www.seio.es/BBEIO/BEIOVol34Num3/index.html">“Examining the <span class="math inline">\(n\geq 30\)</span> is Sufficiently Large for the Sampling Distribution of <span class="math inline">\(\bar{X}\)</span> to Follow a Normal Distribution Caveat,”</a> Bulletin of Statistics and Operations Research, December 2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe.</p></li>
-<li><p><a href="https://journals.humankinetics.com/doi/10.1123/jab.2018-0107">“Sprint Assessment using Machine Learning and a Wearable Accelerometer,”</a> Journal of Applied Biomechanics, 2018 with Reed D. Gurchiek, Hasthika R. Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan Needle, Jeffrey M. McBride.</p></li>
-<li><p><a href="https://www.tandfonline.com/doi/abs/10.1080/03610926.2017.1337146">“Bootstrapping analogs of the Hotelling’s <span class="math inline">\(T^2\)</span> test,”</a> Communications in Statistics Theory and Methods, Oct. 17, 2017 with Hasthika Rupasinghe.</p></li>
-<li><p><a href="http://www.ccsenet.org/journal/index.php/ijsp/article/view/43460">“Visualizing and Testing the Multivariate Linear Regression Model,”</a> International Journal of Statistics and Probability, January 22, 2015, with David J Olive, Hasthika Rupasinghe.</p></li>
+<li><p><a
+href="https://www.tandfonline.com/doi/full/10.1080/27658449.2021.1921904">“HRLR
+regression”</a> Research in Mathematics &amp; Statistics (RMS), April
+2021 with Alan Arnholt, Hasthika S. Rupasinghe</p></li>
+<li><p><a
+href="https://stat-ata-asu.github.io/PredictiveModelBuilding/index.html">“Advertisement
+for Predictive Model Building,”</a> Conference Proceedings, 32nd Annual
+International Conference on Technology in Collegiate Mathematics
+(ICTCM), with Alan Arnholt, Hasthika Rupasinghe.</p></li>
+<li><p><a
+href="https://link.springer.com/epdf/10.1007/s00362-020-01193-1?sharing_token=IEVJ9SMhkoOgX17zctDLJ_e4RwlQNchNByi7wbcMAY46pL_c3OcMFScOQnjarxhMVLyOnuYO-yd1p6ruHghLNsnbMpg_r52zvFhxZgMu0V0j66kol8YiTW0wZH-IPwA0aK-7xCC_XEDTtEy740OT3VrTkwzrwN2c7roi-Lk9Pug%3D">“Comparing
+six shrinkage estimators with large sample theory and asymptotically
+optimal prediction intervals”</a>, Statistical Papers, June 2020 with
+David J Olive.</p></li>
+<li><p><a
+href="http://www.m-hikari.com/imf/imf-2019/5-8-2019/p/rupasingheIMF5-8-2019.pdf">“A
+cosine approximation to the skew normal distribution”</a>, International
+Mathematical Forum, November 2019 with Hasthika S. Rupasinghe Arachchige
+Don, Jose Almer T. Sanqui.</p></li>
+<li><p><a
+href="https://urldefense.proofpoint.com/v2/url?u=http-3A__links.springernature.com_f_a_x0ZB10SmA6gdKsY8y8N-2D0w-7E-7E_AABE5gA-7E_RgRek5TSP0QwaHR0cDovL3d3dy5zcHJpbmdlci5jb20vLS8zL0FXb1l6Q1UyMDBhN21nTVg3Z3lzVwNzcGNCCgAAUmGyXDBnzudSDmRvbGl2ZUBzaXUuZWR1WAQAAAbn&amp;d=DwMFaQ&amp;c=jrLYy3FV6j9HoN3FfGW-SLJoSRpiMyAzztY4B1tagEk&amp;r=g5_oslGJ_XAZglOKV1oObQ&amp;m=7GCPdd2Ig5VZE1DqMN8g2xZIEJeTfUH2ngBcqzJT4qQ&amp;s=6_Rn0ynHPiAE4EkoWtewv7kG21JJitl-3HaQ3ijqOWk&amp;e=%3E">“Bootstrapping
+Multiple Linear Regression After Variable Selection,”</a> Statistical
+Papers, April 2019 with David J Olive.</p></li>
+<li><p><a
+href="http://www.ccsenet.org/journal/index.php/ijsp/article/view/0/37493">“A
+Sub-Model Theorem for Ordinary Least Squares”</a>, International Journal
+of Statistics and Probability, January 2019.</p></li>
+<li><p><a
+href="http://www.seio.es/BBEIO/BEIOVol34Num3/index.html">“Examining the
+<span class="math inline">\(n\geq 30\)</span> is Sufficiently Large for
+the Sampling Distribution of <span
+class="math inline">\(\bar{X}\)</span> to Follow a Normal Distribution
+Caveat,”</a> Bulletin of Statistics and Operations Research, December
+2018 with Alan Arnholt, William Bauldry, Hasthika Rupasinghe.</p></li>
+<li><p><a
+href="https://journals.humankinetics.com/doi/10.1123/jab.2018-0107">“Sprint
+Assessment using Machine Learning and a Wearable Accelerometer,”</a>
+Journal of Applied Biomechanics, 2018 with Reed D. Gurchiek, Hasthika R.
+Arachchige, Ryan S. McGinnis, Alan Arnholt, Herman van Werkhoven, Alan
+Needle, Jeffrey M. McBride.</p></li>
+<li><p><a
+href="https://www.tandfonline.com/doi/abs/10.1080/03610926.2017.1337146">“Bootstrapping
+analogs of the Hotelling’s <span class="math inline">\(T^2\)</span>
+test,”</a> Communications in Statistics Theory and Methods, Oct. 17,
+2017 with Hasthika Rupasinghe.</p></li>
+<li><p><a
+href="http://www.ccsenet.org/journal/index.php/ijsp/article/view/43460">“Visualizing
+and Testing the Multivariate Linear Regression Model,”</a> International
+Journal of Statistics and Probability, January 22, 2015, with David J
+Olive, Hasthika Rupasinghe.</p></li>
 </ul>
 <div id="under-review-and-work-in-progress" class="section level4">
 <h4>Under review and Work in Progress</h4>
 <ul>
-<li><p>“HRLR Regression” submitted, with Alan Arnholt, Hasthika Rupasinghe.</p></li>
-<li><p>“Large Sample Bootstrap Prediction Intervals for Variable Selection or Shrinkage Estimators” submitted, with Hasthika Rupasinghe.<br />
-</p></li>
-<li><p>“Bootstrap Prediction Regions for Multivariate Regression” Work in progress with Hasthika Rupasinghe.</p></li>
+<li><p>“Large Sample Bootstrap Prediction Intervals for Variable
+Selection or Shrinkage Estimators” submitted, with Hasthika
+Rupasinghe.</p></li>
+<li><p>“Bootstrap Prediction Regions for Multivariate Regression” Work
+in progress with Hasthika Rupasinghe.</p></li>
 </ul>
 </div>
 </div>
 <div id="grants" class="section level2">
 <h2>Grants</h2>
 <ul>
-<li><a href="https://cas.appstate.edu/faculty-staff/faculty-researchproposal-development-summer-grants/2018-summer-grant-recipients">CAS Research/Proposal Development Summer Grant</a> (Received)</li>
+<li><a
+href="https://cas.appstate.edu/faculty-staff/faculty-researchproposal-development-summer-grants/2018-summer-grant-recipients">CAS
+Research/Proposal Development Summer Grant</a> (Received)</li>
 <li>Chancellor’s Innovation Scholars Program (Applied)</li>
 <li>NSF Grant – Statistics (Applied)</li>
 </ul>
@@ -327,6 +381,8 @@ $(document).ready(function () {
 <div id="professional-exams" class="section level2">
 <h2>Professional Exams</h2>
 <ul>
+<li>Sociaty of Actuaries(SOA) Statistics for Risk Modeling (SRM)
+exam</li>
 <li>Sociaty of Actuaries(SOA) Financial Mathematics(FM) exam</li>
 <li>Sociaty of Actuaries(SOA) Probability(P) exam</li>
 </ul>
@@ -354,6 +410,7 @@ $(document).ready(function () {
 		Boone, NC 28608
 		</p> 
 </div>
+
 
 
 

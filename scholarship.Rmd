@@ -2,7 +2,7 @@
 title: "Scholarship"
 output: html_document
 ---
-My research interests lie in the fields of Linear Regression, Variable Selection, Prediction Interval and Bootstraps, and Machine Learning. 
+My research interests lie in the fields of Linear Regression, Variable Selection, Prediction Intervals and Bootstraps, and Machine Learning. 
 
 The goal of my recent research work is  to develop methods for inference after variable selection. The regression model uses several predictor variables to 
 predict a response variable. Variable selection attempts to choose a subset of the predictor variables without any important loss of information. A prediction 
@@ -13,7 +13,8 @@ I am interested in Actuarial science as well.
 
 ## Publications
 
-
+* ["HRLR regression"](https://www.tandfonline.com/doi/full/10.1080/27658449.2021.1921904) Research in Mathematics & Statistics (RMS), April 2021 with Alan
+Arnholt, Hasthika S. Rupasinghe
 
 * ["Advertisement for Predictive Model Building,"](https://stat-ata-asu.github.io/PredictiveModelBuilding/index.html) Conference Proceedings, 32nd Annual International Conference on Technology in Collegiate Mathematics (ICTCM), with Alan Arnholt, Hasthika Rupasinghe.
 
@@ -37,10 +38,8 @@ I am interested in Actuarial science as well.
 
 #### Under review and Work in Progress
 
+* "Large Sample Bootstrap Prediction Intervals for Variable Selection or Shrinkage Estimators" submitted, with Hasthika Rupasinghe.
 
-* "HRLR Regression" submitted, with Alan Arnholt, Hasthika Rupasinghe. 
-
-* "Large Sample Bootstrap Prediction Intervals for Variable Selection or Shrinkage Estimators" submitted, with Hasthika Rupasinghe.  
 * "Bootstrap Prediction Regions for Multivariate Regression" Work in progress with Hasthika Rupasinghe.
 
 
@@ -55,7 +54,7 @@ I am interested in Actuarial science as well.
 
 
 ## Professional Exams
-
+* Sociaty of Actuaries(SOA) Statistics for Risk Modeling (SRM) exam
 * Sociaty of Actuaries(SOA) Financial Mathematics(FM) exam
 * Sociaty of Actuaries(SOA) Probability(P) exam
 
