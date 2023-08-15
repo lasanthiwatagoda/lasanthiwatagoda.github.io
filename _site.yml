@@ -3,8 +3,6 @@ output_dir: '.'
 navbar:
   title: Lasanthi Watagoda
   left:
-  - text: For Students
-    href: for-students.html
   - text: Resources
     href: resources.html
   - text: Teaching
