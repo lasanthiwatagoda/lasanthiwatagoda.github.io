@@ -6,12 +6,17 @@ output: html_document
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
 
-### Fall 2023
+### Spring 2025
 
 * [STT 3851 | Statistical Data Analysis II](https://lasanthiwatagoda.github.io/STT3851/)
 
 
 <!--
+
+### Fall 2023
+
+* [STT 3851 | Statistical Data Analysis II](https://lasanthiwatagoda.github.io/STT3851/)
+
 
 ### Fall 2022
 
@@ -87,6 +92,11 @@ output: html_document
 ***
 
 ### Recent Courses
+
+
+* STT 3250  |Introduction to Probability (Spring 2021)
+
+* STT 3851 | Statistical Data Analysis II (Spring 2021)
 
 * STT4830  | Linear Regression Models (Fall 2020)
 
