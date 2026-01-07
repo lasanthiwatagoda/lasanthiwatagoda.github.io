@@ -5,15 +5,19 @@ output: html_document
 
 <i class="glyphicon glyphicon-star"></i> This page will serve as a directory for courses from Fall 2011 forward. <i class="glyphicon glyphicon-thumbs-up"></i>
 
-### Fall 2025
+### Spring 2026
 
-* [STT 3852 | Statistical Learning II](https://lasanthiwatagoda.github.io/STT3852/)
+*  [STT 3851 | Statistical Data Analysis II](https://lasanthiwatagoda.github.io/STT3851/)
 
 
 * [STT 2810 | Introduction to Statistics](https://www.pearsonmylabandmastering.com/northamerica/)
 
 <!--
 
+
+### Fall 2025
+
+[STT 3852 | Statistical Learning II](https://lasanthiwatagoda.github.io/STT3852/)
 
 ### Spring 2025
 
