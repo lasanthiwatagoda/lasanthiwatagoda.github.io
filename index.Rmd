@@ -1,4 +1,324 @@
 ---
+title: ""
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+---
+
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2b3440;
+}
+
+.main-container {
+  max-width: 1120px !important;
+}
+
+h1, h2, h3 {
+  color: #1f3a5f;
+}
+
+a {
+  color: #2f5597;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  padding: 46px 42px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #edf3f9 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.08);
+}
+
+.hero-text {
+  flex: 1.35;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 265px;
+  text-align: center;
+}
+
+.hero-photo {
+  width: 245px;
+  height: 245px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  border: 7px solid white;
+  box-shadow: 0 8px 25px rgba(31, 58, 95, 0.20);
+}
+
+.hero-name {
+  font-size: 2.65em;
+  line-height: 1.08;
+  font-weight: 750;
+  color: #1f3a5f;
+  margin: 0 0 10px 0;
+}
+
+.hero-role {
+  font-size: 1.25em;
+  color: #52677d;
+  margin-bottom: 19px;
+  font-weight: 500;
+}
+
+.hero-intro {
+  font-size: 1.08em;
+  max-width: 680px;
+  margin-bottom: 22px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 17px;
+  margin: 5px 8px 5px 0;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.hero-button:hover {
+  background: #1f3a5f;
+}
+
+.hero-button-outline {
+  background: white;
+  color: #2f5597 !important;
+  border: 1px solid #b9c8d9;
+}
+
+.hero-button-outline:hover {
+  background: #f3f6fa;
+  color: #1f3a5f !important;
+}
+
+.focus-strip {
+  background: white;
+  border-left: 6px solid #7952b3;
+  border-top: 1px solid #e1e5eb;
+  border-right: 1px solid #e1e5eb;
+  border-bottom: 1px solid #e1e5eb;
+  padding: 18px 22px;
+  margin: 20px 0 32px 0;
+  border-radius: 8px;
+}
+
+.focus-strip strong {
+  color: #1f3a5f;
+}
+
+.section-title {
+  margin-top: 34px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 18px 0 34px 0;
+}
+
+.home-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-top: 5px solid #2f5597;
+  border-radius: 10px;
+  padding: 21px 20px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(31, 58, 95, 0.11);
+}
+
+.home-card h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 1.2em;
+}
+
+.home-card p {
+  color: #596878;
+  min-height: 78px;
+}
+
+.card-link {
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.research-card {
+  border-top-color: #7952b3;
+}
+
+.teaching-card {
+  border-top-color: #3182bd;
+}
+
+.student-card {
+  border-top-color: #4f8a5b;
+}
+
+.bio-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 20px 23px;
+  margin: 20px 0;
+}
+
+.degree {
+  font-weight: 700;
+  color: #1f3a5f;
+}
+
+.updated {
+  text-align: center;
+  color: #7a8793;
+  font-size: 0.88em;
+  margin: 38px 0 8px 0;
+}
+
+@media (max-width: 820px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 32px 22px;
+    gap: 24px;
+  }
+
+  .hero-photo-wrap {
+    flex-basis: auto;
+  }
+
+  .hero-photo {
+    width: 205px;
+    height: 205px;
+  }
+
+  .hero-name {
+    font-size: 2.1em;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card p {
+    min-height: auto;
+  }
+}
+</style>
+
+<div class="hero">
+
+<div class="hero-text">
+
+<div class="hero-name">Lasanthi Watagoda</div>
+
+<div class="hero-role">
+Associate Professor of Statistics<br>
+Department of Mathematical Sciences · Appalachian State University
+</div>
+
+<div class="hero-intro">
+
+I am a statistician and educator with interests spanning **statistical learning, regression, variable selection, bootstrap methods, and applied statistics**. My work brings together methodological research, statistical computing, and student-centered teaching.
+
+</div>
+
+<a class="hero-button" href="scholarship.html">Research & Scholarship</a>
+<a class="hero-button hero-button-outline" href="teaching.html">Teaching</a>
+<a class="hero-button hero-button-outline" href="for-students.html">For Students</a>
+
+</div>
+
+<div class="hero-photo-wrap">
+<img class="hero-photo" src="images/Lasanthi.jpg" alt="Lasanthi Watagoda">
+</div>
+
+</div>
+
+<div class="focus-strip">
+
+<strong>Current Appointment:</strong> Associate Professor in the Department of Mathematical Sciences at Appalachian State University.
+
+</div>
+
+## Explore {.section-title}
+
+<div class="card-grid">
+
+<div class="home-card research-card">
+
+### Research & Scholarship
+
+Explore research interests, publications, grants, and ongoing scholarly work in statistical methodology and applied statistics.
+
+<a class="card-link" href="scholarship.html">View Scholarship →</a>
+
+</div>
+
+<div class="home-card teaching-card">
+
+### Teaching
+
+Access current and previous courses, course materials, statistical computing resources, and teaching-related information.
+
+<a class="card-link" href="teaching.html">View Teaching →</a>
+
+</div>
+
+<div class="home-card student-card">
+
+### For Students
+
+Find office-hour information, student resources, important academic links, and other materials for current students.
+
+<a class="card-link" href="for-students.html">Student Resources →</a>
+
+</div>
+
+</div>
+
+## About Me {.section-title}
+
+<div class="bio-card">
+
+I received my <span class="degree">Ph.D. in Mathematics</span> from the Department of Mathematics at **Southern Illinois University Carbondale** in August 2017.
+
+I am currently an **Associate Professor in the Department of Mathematical Sciences at Appalachian State University**, where my work centers on statistics, statistical learning, research, and teaching.
+
+</div>
+
+<div class="updated">
+
+Website last updated on `r format(Sys.time(), "%B %d, %Y")`.
+
+</div>
+
+---
+
+
+
+<!--
+---
 title: "Welcome!"
 ---
 
@@ -14,3 +334,4 @@ This website was last rendered on `r format(Sys.time(), "%A, %B %d, %Y - %X.")`
 
 
 * * *
+-->

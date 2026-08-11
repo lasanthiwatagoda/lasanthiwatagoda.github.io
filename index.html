@@ -11,12 +11,12 @@
 
 
 
-<title>Welcome!</title>
+<title>index.knit</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -30,10 +30,8 @@
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -44,16 +42,7 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
+
 
 
 
@@ -83,6 +72,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +132,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +169,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +224,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,9 +234,6 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="for-students.html">For Students</a>
-</li>
-<li>
   <a href="resources.html">Resources</a>
 </li>
 <li>
@@ -286,17 +272,319 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Welcome!</h1>
 
 </div>
 
 
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2b3440;
+}
+
+.main-container {
+  max-width: 1120px !important;
+}
+
+h1, h2, h3 {
+  color: #1f3a5f;
+}
+
+a {
+  color: #2f5597;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  padding: 46px 42px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #edf3f9 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.08);
+}
+
+.hero-text {
+  flex: 1.35;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 265px;
+  text-align: center;
+}
+
+.hero-photo {
+  width: 245px;
+  height: 245px;
+  object-fit: cover;
+  object-position: center 25%;
+  border-radius: 50%;
+  border: 7px solid white;
+  box-shadow: 0 8px 25px rgba(31, 58, 95, 0.20);
+}
+
+.hero-name {
+  font-size: 2.65em;
+  line-height: 1.08;
+  font-weight: 750;
+  color: #1f3a5f;
+  margin: 0 0 10px 0;
+}
+
+.hero-role {
+  font-size: 1.25em;
+  color: #52677d;
+  margin-bottom: 19px;
+  font-weight: 500;
+}
+
+.hero-intro {
+  font-size: 1.08em;
+  max-width: 680px;
+  margin-bottom: 22px;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 17px;
+  margin: 5px 8px 5px 0;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.hero-button:hover {
+  background: #1f3a5f;
+}
+
+.hero-button-outline {
+  background: white;
+  color: #2f5597 !important;
+  border: 1px solid #b9c8d9;
+}
+
+.hero-button-outline:hover {
+  background: #f3f6fa;
+  color: #1f3a5f !important;
+}
+
+.focus-strip {
+  background: white;
+  border-left: 6px solid #7952b3;
+  border-top: 1px solid #e1e5eb;
+  border-right: 1px solid #e1e5eb;
+  border-bottom: 1px solid #e1e5eb;
+  padding: 18px 22px;
+  margin: 20px 0 32px 0;
+  border-radius: 8px;
+}
+
+.focus-strip strong {
+  color: #1f3a5f;
+}
+
+.section-title {
+  margin-top: 34px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 18px 0 34px 0;
+}
+
+.home-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-top: 5px solid #2f5597;
+  border-radius: 10px;
+  padding: 21px 20px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(31, 58, 95, 0.11);
+}
+
+.home-card h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+  font-size: 1.2em;
+}
+
+.home-card p {
+  color: #596878;
+  min-height: 78px;
+}
+
+.card-link {
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.research-card {
+  border-top-color: #7952b3;
+}
+
+.teaching-card {
+  border-top-color: #3182bd;
+}
+
+.student-card {
+  border-top-color: #4f8a5b;
+}
+
+.bio-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 20px 23px;
+  margin: 20px 0;
+}
+
+.degree {
+  font-weight: 700;
+  color: #1f3a5f;
+}
+
+.updated {
+  text-align: center;
+  color: #7a8793;
+  font-size: 0.88em;
+  margin: 38px 0 8px 0;
+}
+
+@media (max-width: 820px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 32px 22px;
+    gap: 24px;
+  }
+
+  .hero-photo-wrap {
+    flex-basis: auto;
+  }
+
+  .hero-photo {
+    width: 205px;
+    height: 205px;
+  }
+
+  .hero-name {
+    font-size: 2.1em;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card p {
+    min-height: auto;
+  }
+}
+</style>
+<div class="hero">
+<div class="hero-text">
+<div class="hero-name">
+Lasanthi Watagoda
+</div>
+<div class="hero-role">
+<p>Associate Professor of Statistics<br> Department of Mathematical
+Sciences · Appalachian State University</p>
+</div>
+<div class="hero-intro">
+<p>I am a statistician and educator with interests spanning
+<strong>statistical learning, regression, variable selection, bootstrap
+methods, and applied statistics</strong>. My work brings together
+methodological research, statistical computing, and student-centered
+teaching.</p>
+</div>
+<p><a class="hero-button" href="scholarship.html">Research &amp;
+Scholarship</a>
+<a class="hero-button hero-button-outline" href="teaching.html">Teaching</a>
+<a class="hero-button hero-button-outline" href="for-students.html">For
+Students</a></p>
+</div>
+<div class="hero-photo-wrap">
+<p><img class="hero-photo" src="images/Lasanthi.jpg" alt="Lasanthi Watagoda"></p>
+</div>
+</div>
+<div class="focus-strip">
+<p><strong>Current Appointment:</strong> Associate Professor in the
+Department of Mathematical Sciences at Appalachian State University.</p>
+</div>
+<div id="explore" class="section level2 section-title">
+<h2 class="section-title">Explore</h2>
+<div class="card-grid">
+<div id="research-scholarship"
+class="section level3 home-card research-card">
+<h3>Research &amp; Scholarship</h3>
+<p>Explore research interests, publications, grants, and ongoing
+scholarly work in statistical methodology and applied statistics.</p>
+<p><a class="card-link" href="scholarship.html">View Scholarship
+→</a></p>
+</div>
+<div id="teaching" class="section level3 home-card teaching-card">
+<h3>Teaching</h3>
+<p>Access current and previous courses, course materials, statistical
+computing resources, and teaching-related information.</p>
+<p><a class="card-link" href="teaching.html">View Teaching →</a></p>
+</div>
+<div id="for-students" class="section level3 home-card student-card">
+<h3>For Students</h3>
+<p>Find office-hour information, student resources, important academic
+links, and other materials for current students.</p>
+<p><a class="card-link" href="for-students.html">Student Resources
+→</a></p>
+</div>
+</div>
+</div>
+<div id="about-me" class="section level2 section-title">
+<h2 class="section-title">About Me</h2>
+<div class="bio-card">
+<p>I received my <span class="degree">Ph.D. in Mathematics</span> from
+the Department of Mathematics at <strong>Southern Illinois University
+Carbondale</strong> in August 2017.</p>
+<p>I am currently an <strong>Associate Professor in the Department of
+Mathematical Sciences at Appalachian State University</strong>, where my
+work centers on statistics, statistical learning, research, and
+teaching.</p>
+</div>
+<div class="updated">
+<p>Website last updated on August 11, 2026.</p>
+</div>
+<hr />
+<!--
+---
+title: "Welcome!"
+---
+
 <figure>
 <img src="images/Lasanthi.jpg" alt="Alan" align="left" hspace="20" style="width:100px;height:120px;">
 </figure>
-<p>I received my Ph. D. in Mathematics from the Department of Mathematics at Southern Illinois University Carbondale in August 2017. Currently, I am working as an Assistant Professor in the Department of Mathematical Sciences at Appalachian State University.</p>
-<p>This website was last rendered on Sunday, August 15, 2021 - 06:53:28 AM.</p>
-<hr />
+ 
+I received my Ph. D. in Mathematics  from the Department of Mathematics at Southern Illinois University Carbondale in August 2017. 
+Currently, I am working as an Assistant Professor in the Department of Mathematical Sciences at Appalachian State University.
+
+
+This website was last rendered on Tuesday, August 11, 2026 - 12:29:37 PM.
+
+
+* * *
+-->
+</div>
 
 <div id="footer">
      <p><strong>Lasanthi Watagoda</strong> </br>
