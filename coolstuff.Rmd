@@ -1,13 +1,199 @@
 ---
-title: "Cool Stuff: Non-Academic Links"
-output: html_document
+title: ""
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
 ---
 
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2b3440;
+}
 
-- [ASU Recreation Center](http://urec.appstate.edu/student-recreation-center)
-- [Group Fitness Class Schedule at SRC](https://fitness.appstate.edu/group-fitness-schedule-fall-2016)
+.main-container {
+  max-width: 1050px !important;
+}
 
-- [Aboout Sri Lanka](https://en.wikipedia.org/wiki/Sri_Lanka)
+h1, h2, h3 {
+  color: #1f3a5f;
+}
 
+.page-hero {
+  padding: 42px 40px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #edf3f9 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31,58,95,.08);
+}
 
-* * *
+.page-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.5em;
+}
+
+.page-hero p {
+  margin: 0;
+  color: #52677d;
+  font-size: 1.1em;
+  max-width: 800px;
+}
+
+.section-title {
+  margin-top: 38px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.intro-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-left: 6px solid #4f8a5b;
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin: 20px 0 30px 0;
+}
+
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0 34px 0;
+}
+
+.interest-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(31,58,95,.05);
+}
+
+.interest-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.family-card {
+  border-top: 5px solid #4f8a5b;
+}
+
+.outdoor-card {
+  border-top: 5px solid #3182bd;
+}
+
+.srilanka-card {
+  border-top: 5px solid #d49a35;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 9px 14px;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+.link-button:hover {
+  background: #1f3a5f;
+  text-decoration: none !important;
+}
+
+.quote-box {
+  background: #f8f6fc;
+  border-left: 6px solid #7952b3;
+  padding: 18px 22px;
+  border-radius: 8px;
+  margin: 25px 0;
+  color: #596878;
+  font-size: 1.05em;
+}
+
+.interest-card ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 30px 24px;
+  }
+
+  .page-hero h1 {
+    font-size: 2em;
+  }
+}
+</style>
+
+<div class="page-hero">
+
+# Beyond Academia
+
+A little about life outside teaching, research, and statistics.
+
+</div>
+
+<div class="intro-card">
+
+Outside of work, I enjoy spending time with my family and exploring the outdoors. Much of my free time is centered around activities we can enjoy together, whether that means a weekend camping trip, riding bikes, or finding a new trail to explore.
+
+</div>
+
+## Things I Enjoy {.section-title}
+
+<div class="interest-grid">
+
+<div class="interest-card family-card">
+
+### Family Adventures
+
+I enjoy spending time with my family and taking the kids on small adventures. We especially enjoy activities that get us outside and give us a chance to explore somewhere new together.
+
+</div>
+
+<div class="interest-card outdoor-card">
+
+### Outdoors
+
+Some of my favorite activities include:
+
+- Camping
+- Biking
+- Hiking
+- Exploring mountain trails
+- Visiting waterfalls
+- Spending time in the Blue Ridge Mountains
+
+I especially enjoy trails that lead to waterfalls or scenic overlooks.
+
+</div>
+
+<div class="interest-card srilanka-card">
+
+### Sri Lanka
+
+Sri Lanka is an important part of my background and remains a place I enjoy returning to and sharing with my family.
+
+<a class="link-button" href="https://en.wikipedia.org/wiki/Sri_Lanka" target="_blank">Learn About Sri Lanka →</a>
+
+</div>
+
+</div>
+
+<div class="quote-box">
+
+For me, time away from work is usually less about having a particular hobby and more about spending time with family, getting outdoors, and making new memories together.
+
+</div>
+
+---

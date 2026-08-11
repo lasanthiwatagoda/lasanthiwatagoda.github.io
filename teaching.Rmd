@@ -228,7 +228,7 @@ This page highlights courses taught, instructional experience, online teaching, 
 
 A course focused on statistical modeling, data analysis, computing, and interpretation.
 
-<a class="course-button" href="https://lasanthiwatagoda.github.io/STT3851/">Course Website →</a>
+<a class="course-button" href="https://lasanthiwatagoda.github.io/STT3852/">Course Website →</a>
 
 </div>
 

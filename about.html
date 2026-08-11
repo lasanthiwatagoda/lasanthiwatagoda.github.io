@@ -1,75 +1,52 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>About me</title>
+<title>about.knit</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
 
 <link rel="stylesheet" href="alans.css" type="text/css" />
 
@@ -81,13 +58,8 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -101,40 +73,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -162,7 +110,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -174,7 +122,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -184,11 +132,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -200,13 +165,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -214,16 +178,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -236,6 +193,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -266,7 +224,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -276,22 +234,19 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="for-students.html">For Students</a>
-</li>
-<li>
-  <a href="resources.html">Resources</a>
-</li>
-<li>
   <a href="teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="for-students.html">For Students</a>
 </li>
 <li>
   <a href="scholarship.html">Scholarship</a>
 </li>
 <li>
-  <a href="SSD.html">Student Scholars Day 2019</a>
+  <a href="resources.html">Resources</a>
 </li>
 <li>
-  <a href="coolstuff.html">Cool Stuff</a>
+  <a href="coolstuff.html">Beyond Academia</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -313,20 +268,399 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">About me</h1>
 
 </div>
 
 
-<figure>
-<img src="images/LasWebPic.png" alt="Las" align="left" hspace="20" style="width:85px;height:100px;">
-</figure>
-<p>I am an Assistant professor in the department of Mathematical sciences at Appalachian state University. I am from Sri Lanka originally, and after my undergraduate studies at the University of Sri Jayewardenepura, I joined the Master program in the department of Mathematics at Southern Illinois University, Carbondale. I completed my PhD in Mathematics at the same University where my research focused on Statistical learning which is a branch of applied statistics that emerged in response to machine learning, emphasizing statistical models and assessment of uncertainty. I often enjoy working with big data sets.</p>
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.72;
+  color: #2b3440;
+}
+
+.main-container {
+  max-width: 1080px !important;
+}
+
+h1, h2, h3 {
+  color: #1f3a5f;
+}
+
+a {
+  color: #2f5597;
+}
+
+.page-hero {
+  padding: 46px 42px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #eaf1f8 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.08);
+}
+
+.page-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.55em;
+}
+
+.page-hero .subtitle {
+  color: #52677d;
+  font-size: 1.18em;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  max-width: 820px;
+  margin-bottom: 0;
+  font-size: 1.05em;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 19px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 22px;
+  margin: 20px 0 34px 0;
+}
+
+.bio-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-left: 6px solid #2f5597;
+  border-radius: 10px;
+  padding: 24px 26px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.05);
+}
+
+.highlight-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-top: 5px solid #7952b3;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.highlight-card h3 {
+  margin-top: 0;
+}
+
+.fact {
+  margin-bottom: 16px;
+}
+
+.fact-label {
+  color: #708090;
+  font-size: 0.84em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fact-value {
+  color: #1f3a5f;
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0 34px 0;
+}
+
+.focus-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 21px 22px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.04);
+}
+
+.focus-card h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.research-card {
+  border-top: 5px solid #7952b3;
+}
+
+.teaching-card {
+  border-top: 5px solid #3182bd;
+}
+
+.service-card {
+  border-top: 5px solid #4f8a5b;
+}
+
+.timeline {
+  border-left: 4px solid #d9e2f3;
+  padding-left: 24px;
+  margin: 22px 0 34px 8px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  background: #2f5597;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #aebed0;
+}
+
+.timeline-year {
+  color: #7952b3;
+  font-weight: 750;
+  margin-bottom: 3px;
+}
+
+.timeline-title {
+  color: #1f3a5f;
+  font-size: 1.06em;
+  font-weight: 700;
+}
+
+.timeline-detail {
+  color: #5e6d7b;
+}
+
+.personal-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f5f8f3 100%);
+  border: 1px solid #dde5ed;
+  border-left: 6px solid #4f8a5b;
+  border-radius: 10px;
+  padding: 23px 26px;
+  margin: 20px 0 35px 0;
+}
+
+.personal-box p:last-child {
+  margin-bottom: 0;
+}
+
+.link-row {
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  margin: 5px 7px 5px 0;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #1f3a5f;
+}
+
+.button-outline {
+  background: white;
+  color: #2f5597 !important;
+  border: 1px solid #b9c8d9;
+}
+
+.button-outline:hover {
+  background: #f3f6fa;
+}
+
+@media (max-width: 820px) {
+  .profile-grid,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 32px 24px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.05em;
+  }
+}
+</style>
+<div id="about-me" class="section level1 page-hero">
+<h1>About Me</h1>
+<div class="subtitle">
+<p>Associate Professor of Statistics · Appalachian State University</p>
+</div>
+<p>I am a statistician, educator, and researcher whose work centers on
+<strong>data science, analytics, statistical modeling, and applied
+statistical methods</strong>. I enjoy connecting statistical theory and
+computation with real-world problems and helping students develop the
+skills to make sense of data.</p>
+</div>
+<div id="background" class="section level2 section-title">
+<h2 class="section-title">Background</h2>
+<div class="profile-grid">
+<div class="bio-card">
+<p>I am an <strong>Associate Professor in the Department of Mathematical
+Sciences at Appalachian State University</strong>. I joined Appalachian
+State in 2017 and was promoted to Associate Professor in
+<strong>2024</strong>.</p>
+<p>I received my <strong>Ph.D. in Mathematics</strong> from the
+Department of Mathematics at <strong>Southern Illinois University
+Carbondale</strong> in August 2017.</p>
+<p>My academic work combines research, teaching, statistical computing,
+and interdisciplinary collaboration. I am particularly interested in
+problems where modern data-analytic methods can be used to improve
+prediction, inference, and decision-making.</p>
+<div class="link-row">
+<p><a class="button" href="scholarship.html">Research &amp; Scholarship
+→</a> <a class="button button-outline" href="teaching.html">Teaching
+→</a></p>
+</div>
+</div>
+<div id="at-a-glance" class="section level3 highlight-card">
+<h3>At a Glance</h3>
+<div class="fact">
+<div class="fact-label">
+Current Position
+</div>
+<div class="fact-value">
+Associate Professor
+</div>
+</div>
+<div class="fact">
+<div class="fact-label">
+Institution
+</div>
+<div class="fact-value">
+Appalachian State University
+</div>
+</div>
+<div class="fact">
+<div class="fact-label">
+Joined App State
+</div>
+<div class="fact-value">
+2017
+</div>
+</div>
+<div class="fact">
+<div class="fact-label">
+Associate Professor Since
+</div>
+<div class="fact-value">
+2024
+</div>
+</div>
+<div class="fact">
+<div class="fact-label">
+Ph.D.
+</div>
+<div class="fact-value">
+Southern Illinois University Carbondale, 2017
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="academic-focus" class="section level2 section-title">
+<h2 class="section-title">Academic Focus</h2>
+<div class="focus-grid">
+<div id="research" class="section level3 focus-card research-card">
+<h3>Research</h3>
+<p>My research interests broadly fall within <strong>data science and
+analytics</strong>, with particular interests in statistical modeling,
+predictive methods, variable selection, bootstrap methods, and machine
+learning.</p>
+</div>
+<div id="teaching" class="section level3 focus-card teaching-card">
+<h3>Teaching</h3>
+<p>I teach courses in statistics, statistical learning, regression,
+probability, and data analysis. I enjoy helping students connect
+statistical ideas with computation and meaningful applications.</p>
+</div>
+<div id="collaboration-service"
+class="section level3 focus-card service-card">
+<h3>Collaboration &amp; Service</h3>
+<p>I value interdisciplinary collaboration, student mentorship,
+curriculum development, and service that strengthens statistics and data
+science education.</p>
+</div>
+</div>
+</div>
+<div id="academic-journey" class="section level2 section-title">
+<h2 class="section-title">Academic Journey</h2>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-year">
+2024–Present
+</div>
+<div class="timeline-title">
+Associate Professor
+</div>
+<div class="timeline-detail">
+Department of Mathematical Sciences, Appalachian State University
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-year">
+2017–2024
+</div>
+<div class="timeline-title">
+Assistant Professor
+</div>
+<div class="timeline-detail">
+Department of Mathematical Sciences, Appalachian State University
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-year">
+2017
+</div>
+<div class="timeline-title">
+Ph.D. in Mathematics
+</div>
+<div class="timeline-detail">
+Southern Illinois University Carbondale
+</div>
+</div>
+</div>
+</div>
+<div id="beyond-the-university" class="section level2 section-title">
+<h2 class="section-title">Beyond the University</h2>
+<div class="personal-box">
+<p>Outside of academic work, I enjoy spending time with my family and
+exploring the outdoors together. Camping, biking, hiking, visiting
+waterfalls, and discovering new places in the Blue Ridge Mountains are
+some of the ways I enjoy stepping away from work and spending time with
+my family.</p>
+<p>I am originally from <strong>Sri Lanka</strong>, which remains an
+important part of my background and identity. I enjoy returning when
+possible and sharing its culture, places, and traditions with my
+family.</p>
+<p><a class="button button-outline" href="recreation.html">Beyond
+Academia →</a></p>
+</div>
 <hr />
+</div>
 
 <div id="footer">
      <p><strong>Lasanthi Watagoda</strong> </br>
@@ -351,13 +685,14 @@ $(document).ready(function () {
 
 
 
+
 </div>
 
 <script>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -375,7 +710,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

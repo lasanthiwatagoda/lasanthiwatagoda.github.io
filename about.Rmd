@@ -1,18 +1,368 @@
 ---
-title: "About me"
+title: ""
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
 ---
 
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.72;
+  color: #2b3440;
+}
 
-<figure>
+.main-container {
+  max-width: 1080px !important;
+}
 
-<img src="./images/LasWebPic.png" alt="Las" align="left" hspace="20" style="width:85px;height:100px;">
-</figure>
-I am an Assistant professor in the department of Mathematical sciences at Appalachian state University. I am from Sri Lanka originally, and after my undergraduate studies at the University of Sri Jayewardenepura, I joined the Master program in the department of Mathematics at Southern Illinois University, Carbondale. 
-I completed my PhD in Mathematics at the same University where my research focused on 
-Statistical learning which is a branch of applied statistics that emerged in response to machine learning, emphasizing statistical models and assessment of uncertainty.
-I often enjoy working with big data sets.
+h1, h2, h3 {
+  color: #1f3a5f;
+}
 
+a {
+  color: #2f5597;
+}
 
+.page-hero {
+  padding: 46px 42px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #eaf1f8 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31, 58, 95, 0.08);
+}
 
+.page-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.55em;
+}
 
-* * * 
+.page-hero .subtitle {
+  color: #52677d;
+  font-size: 1.18em;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  max-width: 820px;
+  margin-bottom: 0;
+  font-size: 1.05em;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 19px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr;
+  gap: 22px;
+  margin: 20px 0 34px 0;
+}
+
+.bio-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-left: 6px solid #2f5597;
+  border-radius: 10px;
+  padding: 24px 26px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.05);
+}
+
+.highlight-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-top: 5px solid #7952b3;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.highlight-card h3 {
+  margin-top: 0;
+}
+
+.fact {
+  margin-bottom: 16px;
+}
+
+.fact-label {
+  color: #708090;
+  font-size: 0.84em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.fact-value {
+  color: #1f3a5f;
+  font-weight: 650;
+  margin-top: 2px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0 34px 0;
+}
+
+.focus-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 21px 22px;
+  box-shadow: 0 4px 14px rgba(31, 58, 95, 0.04);
+}
+
+.focus-card h3 {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.research-card {
+  border-top: 5px solid #7952b3;
+}
+
+.teaching-card {
+  border-top: 5px solid #3182bd;
+}
+
+.service-card {
+  border-top: 5px solid #4f8a5b;
+}
+
+.timeline {
+  border-left: 4px solid #d9e2f3;
+  padding-left: 24px;
+  margin: 22px 0 34px 8px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: -31px;
+  top: 7px;
+  width: 11px;
+  height: 11px;
+  background: #2f5597;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #aebed0;
+}
+
+.timeline-year {
+  color: #7952b3;
+  font-weight: 750;
+  margin-bottom: 3px;
+}
+
+.timeline-title {
+  color: #1f3a5f;
+  font-size: 1.06em;
+  font-weight: 700;
+}
+
+.timeline-detail {
+  color: #5e6d7b;
+}
+
+.personal-box {
+  background: linear-gradient(135deg, #f8fafc 0%, #f5f8f3 100%);
+  border: 1px solid #dde5ed;
+  border-left: 6px solid #4f8a5b;
+  border-radius: 10px;
+  padding: 23px 26px;
+  margin: 20px 0 35px 0;
+}
+
+.personal-box p:last-child {
+  margin-bottom: 0;
+}
+
+.link-row {
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 15px;
+  margin: 5px 7px 5px 0;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #1f3a5f;
+}
+
+.button-outline {
+  background: white;
+  color: #2f5597 !important;
+  border: 1px solid #b9c8d9;
+}
+
+.button-outline:hover {
+  background: #f3f6fa;
+}
+
+@media (max-width: 820px) {
+  .profile-grid,
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 32px 24px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.05em;
+  }
+}
+</style>
+
+<div class="page-hero">
+
+# About Me
+
+<div class="subtitle">
+Associate Professor of Statistics · Appalachian State University
+</div>
+
+I am a statistician, educator, and researcher whose work centers on **data science, analytics, statistical modeling, and applied statistical methods**. I enjoy connecting statistical theory and computation with real-world problems and helping students develop the skills to make sense of data.
+
+</div>
+
+## Background {.section-title}
+
+<div class="profile-grid">
+
+<div class="bio-card">
+
+I am an **Associate Professor in the Department of Mathematical Sciences at Appalachian State University**. I joined Appalachian State in 2017 and was promoted to Associate Professor in **2024**.
+
+I received my **Ph.D. in Mathematics** from the Department of Mathematics at **Southern Illinois University Carbondale** in August 2017.
+
+My academic work combines research, teaching, statistical computing, and interdisciplinary collaboration. I am particularly interested in problems where modern data-analytic methods can be used to improve prediction, inference, and decision-making.
+
+<div class="link-row">
+<a class="button" href="scholarship.html">Research & Scholarship →</a>
+<a class="button button-outline" href="teaching.html">Teaching →</a>
+</div>
+
+</div>
+
+<div class="highlight-card">
+
+### At a Glance
+
+<div class="fact">
+<div class="fact-label">Current Position</div>
+<div class="fact-value">Associate Professor</div>
+</div>
+
+<div class="fact">
+<div class="fact-label">Institution</div>
+<div class="fact-value">Appalachian State University</div>
+</div>
+
+<div class="fact">
+<div class="fact-label">Joined App State</div>
+<div class="fact-value">2017</div>
+</div>
+
+<div class="fact">
+<div class="fact-label">Associate Professor Since</div>
+<div class="fact-value">2024</div>
+</div>
+
+<div class="fact">
+<div class="fact-label">Ph.D.</div>
+<div class="fact-value">Southern Illinois University Carbondale, 2017</div>
+</div>
+
+</div>
+
+</div>
+
+## Academic Focus {.section-title}
+
+<div class="focus-grid">
+
+<div class="focus-card research-card">
+
+### Research
+
+My research interests broadly fall within **data science and analytics**, with particular interests in statistical modeling, predictive methods, variable selection, bootstrap methods, and machine learning.
+
+</div>
+
+<div class="focus-card teaching-card">
+
+### Teaching
+
+I teach courses in statistics, statistical learning, regression, probability, and data analysis. I enjoy helping students connect statistical ideas with computation and meaningful applications.
+
+</div>
+
+<div class="focus-card service-card">
+
+### Collaboration & Service
+
+I value interdisciplinary collaboration, student mentorship, curriculum development, and service that strengthens statistics and data science education.
+
+</div>
+
+</div>
+
+## Academic Journey {.section-title}
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-year">2024–Present</div>
+<div class="timeline-title">Associate Professor</div>
+<div class="timeline-detail">Department of Mathematical Sciences, Appalachian State University</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2017–2024</div>
+<div class="timeline-title">Assistant Professor</div>
+<div class="timeline-detail">Department of Mathematical Sciences, Appalachian State University</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2017</div>
+<div class="timeline-title">Ph.D. in Mathematics</div>
+<div class="timeline-detail">Southern Illinois University Carbondale</div>
+</div>
+
+</div>
+
+## Beyond the University {.section-title}
+
+<div class="personal-box">
+
+Outside of academic work, I enjoy spending time with my family and exploring the outdoors together. Camping, biking, hiking, visiting waterfalls, and discovering new places in the Blue Ridge Mountains are some of the ways I enjoy stepping away from work and spending time with my family.
+
+I am originally from **Sri Lanka**, which remains an important part of my background and identity. I enjoy returning when possible and sharing its culture, places, and traditions with my family.
+
+<a class="button button-outline" href="recreation.html">Beyond Academia →</a>
+
+</div>
+
+---
