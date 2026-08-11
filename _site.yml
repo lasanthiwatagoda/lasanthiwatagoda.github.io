@@ -3,14 +3,14 @@ output_dir: '.'
 navbar:
   title: Lasanthi Watagoda
   left:
-  - text: Resources
-    href: resources.html
   - text: Teaching
     href: teaching.html
+  - text: For Students
+    href: for-students.html
   - text: Scholarship
     href: scholarship.html
-  - text: Student Scholars Day
-    href: SSD.html
+  - text: Resources
+    href: resources.html
   - text: Cool Stuff
     href: coolstuff.html
   right:

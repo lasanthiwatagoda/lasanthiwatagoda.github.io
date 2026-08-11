@@ -399,14 +399,7 @@ Department meetings and departmental service activities are typically scheduled 
 <td class="research">Research / Writing</td>
 </tr>
 
-<tr>
-<td class="time">3:00–5:00</td>
-<td class="research">Research / Meetings</td>
-<td class="research">Research / Meetings</td>
-<td class="meeting">Department Meeting*</td>
-<td class="research">Research / Meetings</td>
-<td class="research">Research / Writing</td>
-</tr>
+
 
 </tbody>
 </table>
