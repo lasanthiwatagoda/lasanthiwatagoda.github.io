@@ -11,11 +11,12 @@
 
 
 
-<title>For Students</title>
+<title>for-students.knit</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -28,22 +29,18 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<script src="site_libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="site_libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.2.3/leaflet.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -54,16 +51,7 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
+
 
 
 
@@ -93,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -150,11 +141,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -183,8 +178,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -192,16 +187,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -231,75 +219,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -309,22 +228,12 @@ div.tocify {
 <div class="container-fluid main-container">
 
 
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
-
-
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -334,9 +243,6 @@ div.tocify {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="for-students.html">For Students</a>
-</li>
-<li>
   <a href="resources.html">Resources</a>
 </li>
 <li>
@@ -362,7 +268,7 @@ div.tocify {
 </li>
 <li>
   <a href="https://github.com/lasanthiwatagoda/lasanthiwatagoda.github.io/">
-    <span class="fas fa-github fa-lg"></span>
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -375,16 +281,599 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">For Students</h1>
 
 </div>
 
 
-<div id="office-hours" class="section level2">
+<style>
+body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2b3440;
+}
+
+.main-container {
+  max-width: 1180px !important;
+}
+
+h1, h2, h3, h4 {
+  color: #1f3a5f;
+}
+
+a {
+  color: #2f5597;
+}
+
+.page-hero {
+  padding: 44px 42px;
+  margin: 18px 0 34px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f5f8fc 0%, #eaf1f8 100%);
+  border: 1px solid #dce5ef;
+  box-shadow: 0 8px 28px rgba(31,58,95,.08);
+}
+
+.page-hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.5em;
+}
+
+.page-hero p {
+  margin: 0;
+  color: #52677d;
+  font-size: 1.08em;
+  max-width: 850px;
+}
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #d9e2f3;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 20px 0 30px 0;
+}
+
+.quick-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-top: 5px solid #2f5597;
+  border-radius: 10px;
+  padding: 20px 21px;
+  box-shadow: 0 4px 14px rgba(31,58,95,.06);
+}
+
+.quick-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.office-card {
+  border-top-color: #4f8a5b;
+}
+
+.teaching-card {
+  border-top-color: #3182bd;
+}
+
+.meeting-card {
+  border-top-color: #7952b3;
+}
+
+.action-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 9px 14px;
+  border-radius: 6px;
+  background: #2f5597;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 600;
+}
+
+.action-button:hover {
+  background: #1f3a5f;
+}
+
+.action-button.green {
+  background: #4f8a5b;
+}
+
+.action-button.green:hover {
+  background: #3d7047;
+}
+
+.schedule-wrap {
+  overflow-x: auto;
+  margin: 20px 0 32px 0;
+}
+
+.weekly-schedule {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 6px;
+  table-layout: fixed;
+}
+
+.weekly-schedule th {
+  background: #eef3f8;
+  color: #1f3a5f;
+  padding: 11px 8px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.weekly-schedule td {
+  padding: 12px 8px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 7px;
+  border: 1px solid #e1e6eb;
+  background: #fafbfd;
+}
+
+.weekly-schedule .time {
+  background: #f4f6f8;
+  color: #52606d;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.research {
+  background: #f6f1fc !important;
+  border-color: #dfd2f1 !important;
+  color: #62418c;
+  font-weight: 600;
+}
+
+.office {
+  background: #eef8ef !important;
+  border-color: #cfe6d2 !important;
+  color: #397046;
+  font-weight: 700;
+}
+
+.class {
+  background: #eef6fd !important;
+  border-color: #cadeef !important;
+  color: #285b83;
+  font-weight: 700;
+}
+
+.prep {
+  background: #fff8e8 !important;
+  border-color: #f1dfaa !important;
+  color: #84630f;
+  font-weight: 600;
+}
+
+.meeting {
+  background: #f3effa !important;
+  border-color: #ddd2ee !important;
+  color: #68478e;
+  font-weight: 700;
+}
+
+.lunch {
+  background: #f6f7f8 !important;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.schedule-note {
+  color: #6f7e8d;
+  font-size: .92em;
+  margin-top: -12px;
+  margin-bottom: 25px;
+}
+
+.office-location {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 20px;
+  margin: 20px 0 32px 0;
+}
+
+.location-card,
+.map-card {
+  background: #f8fafc;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.location-card {
+  border-left: 6px solid #4f8a5b;
+}
+
+.map-card {
+  border-left: 6px solid #3182bd;
+}
+
+.location-card h3,
+.map-card h3 {
+  margin-top: 0;
+}
+
+.map-frame {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 20px 0 32px 0;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid #dde5ed;
+  border-radius: 10px;
+  padding: 20px 21px;
+}
+
+.resource-card h3 {
+  margin-top: 0;
+}
+
+.resource-card li {
+  margin-bottom: 8px;
+}
+
+.policy-box {
+  background: #f8fafc;
+  border-left: 6px solid #6c757d;
+  padding: 18px 21px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.quote {
+  color: #647381;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .office-location,
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero {
+    padding: 30px 24px;
+  }
+
+  .page-hero h1 {
+    font-size: 2em;
+  }
+}
+</style>
+<div id="for-students" class="section level1 page-hero">
+<h1>For Students</h1>
+<p>Office hours, weekly availability, course information, campus
+resources, and links for current students.</p>
+<div class="quote">
+“Professors value them, students sample them, and technology expands
+them.” — <em>The Harvard Gazette</em>
+</div>
+</div>
+<div id="fall-2026-at-a-glance" class="section level2 section-title">
+<h2 class="section-title">Fall 2026 at a Glance</h2>
+<div class="quick-grid">
+<div id="office-hours" class="section level3 quick-card office-card">
+<h3>Office Hours</h3>
+<p><strong>Tuesday &amp; Thursday</strong><br />
+<strong>9:15 – 10:45 AM</strong></p>
+<p>Edwin Duncan Hall</p>
+<p>No appointment is necessary during regularly scheduled office
+hours.</p>
+<p><a class="action-button green" href="https://lasanthi.youcanbook.me/" target="_blank">Book
+an Appointment →</a></p>
+</div>
+<div id="teaching" class="section level3 quick-card teaching-card">
+<h3>Teaching</h3>
+<p><strong>STT 3852 — Statistical Learning II</strong></p>
+<p>Tuesday &amp; Thursday<br />
+<strong>11:00 AM – 12:15 PM</strong></p>
+</div>
+<div id="department-meetings"
+class="section level3 quick-card meeting-card">
+<h3>Department Meetings</h3>
+<p>Most Wednesdays<br />
+<strong>3:00 – 5:00 PM</strong></p>
+<p>Department meetings and departmental service activities are typically
+scheduled during this block.</p>
+</div>
+</div>
+</div>
+<div id="typical-weekly-schedule" class="section level2 section-title">
+<h2 class="section-title">Typical Weekly Schedule</h2>
+<div class="schedule-wrap">
+<table class="weekly-schedule">
+<thead>
+<tr>
+<th>
+Time
+</th>
+<th>
+Monday
+</th>
+<th>
+Tuesday
+</th>
+<th>
+Wednesday
+</th>
+<th>
+Thursday
+</th>
+<th>
+Friday
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="time">
+8:00–9:15
+</td>
+<td class="research">
+Research
+</td>
+<td class="prep">
+Class Prep
+</td>
+<td class="research">
+Research
+</td>
+<td class="prep">
+Class Prep
+</td>
+<td class="research">
+Research
+</td>
+</tr>
+<tr>
+<td class="time">
+9:15–10:45
+</td>
+<td class="research">
+Research / Meetings
+</td>
+<td class="office">
+Office Hours
+</td>
+<td class="research">
+Research
+</td>
+<td class="office">
+Office Hours
+</td>
+<td class="research">
+Research / Meetings
+</td>
+</tr>
+<tr>
+<td class="time">
+11:00–12:15
+</td>
+<td class="research">
+Research
+</td>
+<td class="class">
+STT 3852
+</td>
+<td class="research">
+Research / Writing
+</td>
+<td class="class">
+STT 3852
+</td>
+<td class="research">
+Research
+</td>
+</tr>
+<tr>
+<td class="time">
+12:15–1:15
+</td>
+<td class="lunch">
+Lunch
+</td>
+<td class="lunch">
+Lunch
+</td>
+<td class="lunch">
+Lunch
+</td>
+<td class="lunch">
+Lunch
+</td>
+<td class="lunch">
+Lunch
+</td>
+</tr>
+<tr>
+<td class="time">
+1:15–3:00
+</td>
+<td class="prep">
+Prep / Grading
+</td>
+<td class="prep">
+Prep / Grading
+</td>
+<td class="research">
+Research / Meetings
+</td>
+<td class="prep">
+Prep / Grading
+</td>
+<td class="research">
+Research / Writing
+</td>
+</tr>
+<tr>
+<td class="time">
+3:00–5:00
+</td>
+<td class="research">
+Research / Meetings
+</td>
+<td class="research">
+Research / Meetings
+</td>
+<td class="meeting">
+Department Meeting*
+</td>
+<td class="research">
+Research / Meetings
+</td>
+<td class="research">
+Research / Writing
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="schedule-note">
+<p>*This is a typical weekly schedule and may change due to university
+meetings, research collaborations, student appointments, deadlines, or
+other professional responsibilities. Most Wednesday afternoons from
+3:00–5:00 PM are reserved for department meetings.</p>
+</div>
+</div>
+<div id="office-location" class="section level2 section-title">
+<h2 class="section-title">Office Location</h2>
+<div class="office-location">
+<div id="edwin-duncan-hall" class="section level3 location-card">
+<h3>Edwin Duncan Hall</h3>
+<p>My office is located in the newly renovated <strong>Edwin Duncan
+Hall</strong> on Appalachian State University’s Boone campus.</p>
+<p><strong>Building address:</strong><br />
+730 Rivers Street<br />
+Boone, NC 28608</p>
+<p>The renovated building reopens for Fall 2026, with the main entrance
+located near the northwest end of the building by the Peacock Parking
+Lot.</p>
+<p><a class="action-button green" href="https://maps.appstate.edu/" target="_blank">Open
+App State Campus Map →</a></p>
+</div>
+<div id="find-edwin-duncan-hall" class="section level3 map-card">
+<h3>Find Edwin Duncan Hall</h3>
+<iframe class="map-frame" src="https://www.openstreetmap.org/export/embed.html?bbox=-81.6905%2C36.2130%2C-81.6795%2C36.2205&amp;layer=mapnik&amp;marker=36.2168%2C-81.6850">
+</iframe>
+<p><a class="action-button" href="https://maps.appstate.edu/" target="_blank">View
+Interactive Campus Map →</a></p>
+</div>
+</div>
+</div>
+<div id="meeting-with-me" class="section level2 section-title">
+<h2 class="section-title">Meeting With Me</h2>
+<div id="office-hours-appointments" class="section level3 policy-box">
+<h3>Office Hours &amp; Appointments</h3>
+<p>No appointment is necessary during regularly scheduled office
+hours.</p>
+<p>If the scheduled office-hour times do not work for you, individual
+meetings may be arranged by appointment. Please use the online scheduler
+or contact me by email.</p>
+<p><a class="action-button" href="https://lasanthi.youcanbook.me/" target="_blank">Schedule
+a Meeting →</a></p>
+</div>
+</div>
+<div id="important-academic-resources"
+class="section level2 section-title">
+<h2 class="section-title">Important Academic Resources</h2>
+<div class="resource-grid">
+<div id="dates-registration" class="section level3 resource-card">
+<h3>Dates &amp; Registration</h3>
+<ul>
+<li><a
+href="https://registrar.appstate.edu/calendars-schedules/academic-calendar">Academic
+Calendar</a></li>
+<li><a
+href="https://registrar.appstate.edu/calendars-schedules/exam-schedule-0">Exam
+Schedule</a></li>
+<li><a
+href="https://registrar.appstate.edu/students/registration-classes/early-registration-access">Registration
+Access Times</a></li>
+</ul>
+</div>
+<div id="writing-academic-support" class="section level3 resource-card">
+<h3>Writing &amp; Academic Support</h3>
+<ul>
+<li><a href="https://writingcenter.appstate.edu/">University Writing
+Center</a></li>
+<li><a href="https://odr.appstate.edu/">Office of Disability
+Resources</a></li>
+</ul>
+</div>
+<div id="courses-computing" class="section level3 resource-card">
+<h3>Courses &amp; Computing</h3>
+<ul>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="resources.html">Computing Resources</a></li>
+</ul>
+</div>
+<div id="actuarial-science" class="section level3 resource-card">
+<h3>Actuarial Science</h3>
+<ul>
+<li><a href="https://mathscias.appstate.edu/">App State Actuarial
+Science</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="accessibility-university-support"
+class="section level2 section-title">
+<h2 class="section-title">Accessibility &amp; University Support</h2>
+<div class="policy-box">
+<p>Appalachian State University provides accommodations and support for
+students with qualifying disabilities. Students who may need
+accommodations should contact the University’s <strong>Office of
+Disability Resources</strong> and follow the University’s current
+procedures.</p>
+<p><a href="https://odr.appstate.edu/">Visit the Office of Disability
+Resources →</a></p>
+</div>
+<hr />
+</div>
+<div id="section" class="section level2">
+<h2>&lt;!–</h2>
+<p>title: “For Students” output: html_document: toc: true toc_float:
+collapsed: false —</p>
+</div>
+<div id="office-hours-1" class="section level2">
 <h2>Office Hours <i class="fa fa-clock-o"></i></h2>
-<p><font size="5"> <span style="color:purple;"> Professors value them, students sample them, and technology expands them</span> </font> <font size="1"> The Harvard Gazette </font></p>
-<p>Office hours arrangement: No appointment necessary during regularly scheduled hours. Individual meetings are scheduled by appointment via email. Use <a href="https://lasanthi.youcanbook.me/">book now</a> to book several individual meetings.</p>
-<table>
+<p><font size="5"> <span style="color:purple;"> Professors value them,
+students sample them, and technology expands them</span> </font>
+<font size="1"> The Harvard Gazette </font></p>
+<p>Office hours arrangement: No appointment necessary during regularly
+scheduled hours. Individual meetings are scheduled by appointment via
+email. Use <a href="https://lasanthi.youcanbook.me/">book now</a> to
+book several individual meetings.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="19%" />
+<col width="17%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="center">Time</th>
@@ -434,24 +923,43 @@ Walker Hall
 </figure>
 </center>
 <p>Use the leaflet map below to find Walker Hall.</p>
-<div id="htmlwidget-0ac44e0302e81949b0ab" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0ac44e0302e81949b0ab">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-1124a3721eb68bdf0921" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1124a3721eb68bdf0921">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[36.216777,-81.684954],16,[]],"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addMarkers","args":[36.216777,-81.684954,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Walker Hall",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[36.216777,36.216777],"lng":[-81.684954,-81.684954]}},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="important-dates-and-times" class="section level2">
 <h2>Important Dates and Times</h2>
 <ul>
-<li><a href="https://registrar.appstate.edu/calendars-schedules/academic-calendar">Academic calendar</a> <i class="fa fa-calendar"></i></li>
-<li><a href="https://registrar.appstate.edu/calendars-schedules/exam-schedule-0">Exam schedule</a></li>
-<li><a href="https://registrar.appstate.edu/students/registration-classes/early-registration-access">Registration Access Times</a></li>
+<li><a
+href="https://registrar.appstate.edu/calendars-schedules/academic-calendar">Academic
+calendar</a> <i class="fa fa-calendar"></i></li>
+<li><a
+href="https://registrar.appstate.edu/calendars-schedules/exam-schedule-0">Exam
+schedule</a></li>
+<li><a
+href="https://registrar.appstate.edu/students/registration-classes/early-registration-access">Registration
+Access Times</a></li>
 </ul>
 </div>
 <div id="writing-resources" class="section level2">
 <h2>Writing Resources</h2>
-<p>Please visit <a href="http://writingcenter.appstate.edu/">The University Writing Center</a> for resources to help you with your papers and other writing pursuits.</p>
+<p>Please visit <a href="http://writingcenter.appstate.edu/">The
+University Writing Center</a> for resources to help you with your papers
+and other writing pursuits.</p>
 </div>
-<div id="disability-services-and-test-proctoring" class="section level2">
+<div id="disability-services-and-test-proctoring"
+class="section level2">
 <h2>Disability Services and Test Proctoring</h2>
-<p>“Appalachian State University is committed to making reasonable accommodations for individuals with documented qualifying disabilities in accordance with the Americans with Disabilities Act of 1990, and Section 504 of the Rehabilitation Act of 1973. If you have a disability and may need reasonable accommodations in order to have equal access to the University’s courses, programs and activities, please contact the Office of Disability Services (828.262.3056 or <a href="http://ods.appstate.edu" class="uri">http://ods.appstate.edu</a>).Once registration is complete, individuals will meet with ODS staff to discuss eligibility and appropriate accommodations.”</p>
+<p>“Appalachian State University is committed to making reasonable
+accommodations for individuals with documented qualifying disabilities
+in accordance with the Americans with Disabilities Act of 1990, and
+Section 504 of the Rehabilitation Act of 1973. If you have a disability
+and may need reasonable accommodations in order to have equal access to
+the University’s courses, programs and activities, please contact the
+Office of Disability Services (828.262.3056 or <a
+href="http://ods.appstate.edu"
+class="uri">http://ods.appstate.edu</a>).Once registration is complete,
+individuals will meet with ODS staff to discuss eligibility and
+appropriate accommodations.”</p>
 </div>
 <div id="courses-i-teach" class="section level2">
 <h2>Courses I Teach</h2>
@@ -465,11 +973,13 @@ Walker Hall
 <li>Click the <a href="resources.html">Resources Tab</a></li>
 </ul>
 </div>
-<div id="actuarial-science" class="section level2">
+<div id="actuarial-science-1" class="section level2">
 <h2>Actuarial Science</h2>
 <ul>
-<li><p><a href="https://mathscias.appstate.edu/">AppState Actuarial Science website</a></p></li>
-<li><p>Summary of 2018 Curriculum Changes &amp; Exam Transitions</p></li>
+<li><p><a href="https://mathscias.appstate.edu/">AppState Actuarial
+Science website</a></p></li>
+<li><p>Summary of 2018 Curriculum Changes &amp; Exam
+Transitions</p></li>
 </ul>
 <center>
 <figure>
@@ -501,8 +1011,7 @@ Walker Hall
 </div>
 
 
-</div>
-</div>
+
 
 </div>
 
@@ -535,32 +1044,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
