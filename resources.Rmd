@@ -1,166 +1,311 @@
 ---
-title: "Resources"
-output: 
+title: ""
+output:
   html_document:
-    toc: true
-    toc_float:
-      collapsed: false
+    theme: flatly
+    highlight: tango
 ---
 
+<style>
+body {font-size:16px; line-height:1.7; color:#2b3440;}
+.main-container {max-width:1120px !important;}
+h1,h2,h3 {color:#1f3a5f;}
+a {color:#2f5597;}
+.page-hero {padding:42px 40px; margin:18px 0 34px 0; border-radius:16px; background:linear-gradient(135deg,#f5f8fc 0%,#edf3f9 100%); border:1px solid #dce5ef; box-shadow:0 8px 28px rgba(31,58,95,.08);}
+.page-hero h1 {margin:0 0 8px 0; font-size:2.45em;}
+.page-hero p {margin:0; max-width:850px; color:#52677d; font-size:1.08em;}
+.section-title {margin-top:38px; margin-bottom:18px; padding-bottom:8px; border-bottom:3px solid #d9e2f3;}
+.resource-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:20px 0 30px 0;}
+.resource-card {background:white; border:1px solid #dde5ed; border-radius:10px; padding:21px 22px; box-shadow:0 4px 14px rgba(31,58,95,.05);}
+.resource-card h3 {margin-top:0;}
+.resource-card li {margin-bottom:8px;}
+.r-card {border-top:5px solid #276DC3;}
+.posit-card {border-top:5px solid #447099;}
+.tidy-card {border-top:5px solid #2C7FB8;}
+.quarto-card {border-top:5px solid #7952b3;}
+.viz-card {border-top:5px solid #D98C10;}
+.git-card {border-top:5px solid #444;}
+.shiny-card {border-top:5px solid #4f8a5b;}
+.advanced-card {border-top:5px solid #b45f06;}
+.latex-card {border-top:5px solid #6c757d;}
+.learn-card {border-top:5px solid #2f5597;}
+.quick-note {background:#f1f8f2; border-left:6px solid #4f8a5b; padding:17px 20px; border-radius:8px; margin:20px 0 30px 0;}
+.legacy-note {background:#fff8e8; border-left:6px solid #e0a100; padding:17px 20px; border-radius:8px; margin:20px 0;}
+.button {display:inline-block; background:#2f5597; color:white !important; padding:9px 14px; margin:5px 5px 5px 0; border-radius:6px; text-decoration:none !important; font-weight:600;}
+@media(max-width:800px){.resource-grid{grid-template-columns:1fr;}.page-hero{padding:30px 24px;}.page-hero h1{font-size:2em;}}
+</style>
 
-### `r knitr::include_graphics("./images/r.png", dpi = 1500)` R
-* [R homepage](http://www.r-project.org/)
-* [Download R](http://cran.r-project.org/)
-* [Quick R (all types of examples)](http://www.statmethods.net/index.html)
-* [An Introduction to R](http://cran.r-project.org/doc/manuals/r-release/R-intro.html)
-* [*R Programming for Data Science* by Roger D. Peng](https://bookdown.org/rdpeng/rprogdatascience/)
-* [*Exploratory Data Analysis with R* by Roger D. Peng](https://bookdown.org/rdpeng/exdata/)
-* [*Efficient R programming* by Colin Gillespie
-and Robin Lovelace](https://bookdown.org/csgillespie/efficientR/)
-* [*Advanced R Development* by Hadley Wickham](http://adv-r.had.co.nz/)
-* [*Advanced R Solutions* by Malte Grosser and Henning Bumann](https://bookdown.org/Tazinho/Advanced-R-Solutions/)
-* [_Functional Programming and Unit Testing for Data Munging with R_](http://www.brodrigues.co/fput/)
-* [YaRrr! The Pirate's Guide to R by Nathaniel D. Phillips](http://nathanieldphillips.com/thepiratesguidetor/)
-* [Roger Peng's Computing for Data Analysis Videos](http://bit.ly/UC5UDc)
-* [Learning Statistics/R on youtube](http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube)
-* [DataCamp](https://www.datacamp.com/home)
-* [Free Code School intro R Course](https://www.codeschool.com/courses/try-r)
-* [swirl](http://swirlstats.com) "swirl teaches you R programming and data science interactively, at your own pace, and right in the R console"
-* [Why Use Docker with R?](https://www.opencpu.org/posts/opencpu-with-docker/)
+<div class="page-hero">
 
-### `r knitr::include_graphics("./images/rstudio.jpg", dpi = 1200)` RStudio
-* [ASU RStudio Server](https://mathr.math.appstate.edu/)
-* [RStudio (IDE)](http://rstudio.org/)
-* [RStudio (IDE) preview relase](https://www.rstudio.com/ide/download/preview)
-* [RStudio Documentation](https://support.rstudio.com/hc/en-us/categories/200035113-Documentation)
-* [RStudio Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/)
-* [RStudio Easy Tricks for V1.0](https://www.rstudio.com/rviews/2016/11/11/easy-tricks-you-mightve-missed/)
+# Computing & Data Science Resources
 
+A curated collection of current resources for **R, RStudio/Posit, data science, visualization, reproducible reporting, Git/GitHub, Shiny, and statistical computing**.
 
-### `r knitr::include_graphics("./images/DataCamp.png", dpi = 120)` Data Camp
-* [Data Science Courses Using R](https://www.datacamp.com/courses/tech:r)
-* [Data Science Courses Using Python](https://www.datacamp.com/courses/tech:python)
+Rather than an exhaustive list, this page emphasizes resources that are useful for students and remain actively maintained.
 
+</div>
 
-### `r knitr::include_graphics("./images/ggplot2.png", dpi = 300)` Graphics
+<div class="quick-note">
 
-* [The `R` Graph Gallery](http://www.r-graph-gallery.com/)
-* [`ggplot2` documentation](http://docs.ggplot2.org/current/)
-* [`ggplot2` Main Page](http://ggplot2.org/)
-* [`ggplot2` Book](http://ggplot2.org/book/)
-* [Cookbook for R](http://www.cookbook-r.com/Graphs/)
-* [Lattice: Multivariate Data Visualization with R - Figures and code](http://lmdvr.r-forge.r-project.org/figures/figures.html)
-* [Graph Catalog `ggplot2`](http://shinyapps.stat.ubc.ca/r-graph-catalog/)
-* [The Grammar and Graphics of Data Science (Video)](https://www.rstudio.com/resources/webinars/the-grammar-and-graphics-of-data-science/) (58:50)
-* [`plotly` for R](https://cpsievert.github.io/plotly_book/)
-* [Plotly tutorial: Plotly and R](https://www.datacamp.com/community/open-courses/plotly-tutorial-plotly-and-r)
-* [*Interactive Data Visualization (2nd Day)* by
-Paul C. Bauer and Richard Traunmüller](https://bookdown.org/paulcbauer/idv2/)
-* [DiagrammeR](http://rich-iannone.github.io/DiagrammeR/)
+### Recommended Starting Point
 
+If you are new to R, start with **R + RStudio**, then learn basic **dplyr** and **ggplot2** workflows. For reports and presentations, use **Quarto** or R Markdown. Git and GitHub become especially useful for larger projects and collaborative work.
 
-### `r knitr::include_graphics("./images/shiny.png", dpi = 300)` Shiny Apps
+</div>
 
+## Core Tools {.section-title}
 
-* [Shiny](http://shiny.rstudio.com/)
-* [shinyapps.io server](https://shinyapps.io)
-* [Shiny Apps Documentation](http://docs.rstudio.com/shinyapps.io/)
-* [Shiny Cheatsheet](https://www.rstudio.com/resources/cheatsheets/)
-* [Building Shiny Apps](http://stat545.com/shiny01_activity.html)
-* [Normal Distribution Calculator (running on RStudio Shiny Apps server)](https://alanarnholt.shinyapps.io/norm_area2/)
-* [Normal Distribution Calculator (running on Alan's Droplet)](http://alanarnholt.com/shiny/NormalApp/)
-* [Normal Distribution Calculator (with more features running on Alan's Droplet)](http://alanarnholt.com/shiny/NormApp3/)
-* [Sampling Distributions (running on Alan's Droplet)](http://alanarnholt.com/shiny/SamplingDist/)
-* [How to get your very own RStudio Server and Shiny Server with DigitalOcean](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/)
+<div class="resource-grid">
 
-### `r knitr::include_graphics("./images/devtools.png", dpi = 300)` R Package Building
+<div class="resource-card r-card">
 
-* [_R Packages_ by Hadley Wickham](http://r-pkgs.had.co.nz/)
-* [*Mastering Software Development in R* by Roger D. Peng, Sean Kross, and Brooke Anderson](https://bookdown.org/rdpeng/RProgDA/)
-* [`packagedocs`](http://hafen.github.io/packagedocs/)
-* [`pkgdown`](https://hadley.github.io/pkgdown/)
+### R
 
+R is an open-source language and environment for statistical computing, data analysis, and graphics.
 
+- [R Project](https://www.r-project.org/)
+- [Download R from CRAN](https://cran.r-project.org/)
+- [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html)
+- [Official R Manuals](https://cran.r-project.org/manuals.html)
 
-### `r knitr::include_graphics("./images/dplyr.png", dpi = 300)` Using [`dplyr`](https://cran.r-project.org/web/packages/dplyr/index.html)
+</div>
 
-* [Introduction to `dplyr` vignette](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
-* [`dplyr` video1-tutorial](http://www.dataschool.io/dplyr-tutorial-for-faster-data-manipulation-in-r/)
-* [`dplyr` video2-tutorial](http://www.dataschool.io/dplyr-tutorial-part-2/)
+<div class="resource-card posit-card">
 
+### RStudio / Posit
 
-### `r knitr::include_graphics("./images/knitr.png", dpi = 300)`Reproducible Analysis
+RStudio is a widely used IDE for R and also supports Python, SQL, Quarto, Git, and other tools.
 
-* [`knitr` Homepage](http://yihui.name/knitr/)
-* [`knitr` Package Development on GitHub](https://github.com/yihui/knitr)
-* [*Bookdown: Authoring Books with R Markdown* by Yihui Xie](https://bookdown.org/yihui/bookdown/)
-* [*Reproducible Research with* R/RStudio Development on GitHub](https://github.com/christophergandrud/Rep-Res-Book)
-* [CRAN views of Reproducible Analysis](http://cran.r-project.org/web/views/ReproducibleResearch.html)
-* [Reproducible Reporting (Video)](https://www.rstudio.com/resources/webinars/reproducible-reporting/) (58:03)
-* [*Getting used to R, RStudio, and R Markdown* by Chester Ismay](https://ismayc.github.io/rbasics-book/)
-* [*My Final College Paper* by Chester Ismay](https://ismayc.github.io/thesisdown_book/index.html)
+- [RStudio](https://posit.co/products/open-source/rstudio/)
+- [App State RStudio Server](https://mathr.appstate.edu/)
+- [Posit Cheatsheets](https://opensource.posit.co/resources/cheatsheets/)
 
-### `r knitr::include_graphics("./images/rmarkdown.png", dpi = 300)` R Markdown
-* [R Markdown V2](http://rmarkdown.rstudio.com)
-* [Using R Markdown](https://support.rstudio.com/hc/en-us/sections/200149716-R-Markdown)
-* [Getting started with R Markdown (Video)](https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/) (1:02:44)
-* [Markdown](http://daringfireball.net/projects/markdown/)
-  
+</div>
 
-### `r knitr::include_graphics("./images/rmarkdown.png", dpi = 300)` Creating Slides with R
-* [R Markdown - ioslides, reveal.js, Slidy, and Beamer](http://rmarkdown.rstudio.com/ioslides_presentation_format.html#overview)
-* [`xaringan`](https://github.com/yihui/xaringan)
-* [R Presentations](https://support.rstudio.com/hc/en-us/sections/200130218-R-Presentations)
+</div>
 
+## Data Science & Data Wrangling {.section-title}
 
-### `r knitr::include_graphics("./images/git.jpg", dpi = 450)` Git
-* [*Happy Git and GitHub for the useR* by Jenny Bryan and the STAT 545 TAs](http://happygitwithr.com/)
-* [Download Git](http://git-scm.com)
-* [GitHub Help Page](https://help.github.com/)
-* [Git Tutorials (bitbucket)](https://www.atlassian.com/git/tutorial)
-* [Create a Project](http://gitimmersion.com/lab_03.html)
-* [Git Cheatsheet](http://www.ndpsoftware.com/git-cheatsheet.html)
-* [Free Code School Intro to Git](https://www.codeschool.com/courses/try-git)
-* [Pro Git Book](http://git-scm.com/book)
-* [Try Git on GitHub](http://try.github.io/levels/1/challenges/1)
-* [Phillip Guo's Basic Git and Github tutorials (Three tutorials about 10 minutes each)](http://www.pgbovine.net/git-tutorial.htm)
-* [Clone a GitHub Repo with RStudio (Video)](https://www.youtube.com/watch?v=YxZ8J2rqhEM) (5:05)
-* [Clone a GitHub Repo with RStudio (Slides)](https://github.com/alanarnholt/Homework-Examples/blob/master/Slides/ForkCloneRStudio.pdf)
-* [Collaboration and time travel: version control with git, github and RStudio (Video)](https://www.rstudio.com/resources/webinars/collaboration-and-time-travel-version-control-with-git-github-and-rstudio/) (48:56)
+<div class="resource-grid">
 
-### `r knitr::include_graphics("./images/linux2.png", dpi = 2500)` Using Unix Like Commands
-* [Play Terminus to learn basics of the shell](http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
-* [Phillip Guo's Unix-like command line tutorials (Four tutorials about 10 minutes each)](http://www.pgbovine.net/command-line-tutorial.htm)
-* [Michael Stonebank's Unix Tutorial for Beginners](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+<div class="resource-card tidy-card">
 
-### Data Science
-* [*R for Data Science* by Garrett Grolemund and
-Hadley Wickham](http://r4ds.had.co.nz/)
-* [*A MODERN DIVE into Data with R* by Chester Ismay and Albert Y. Kim](https://ismayc.github.io/moderndiver-book/)
-* [*Tidy Text Mining with R* by Julia Silge and David Robinson](http://tidytextmining.com/)
-* [OnePageR](http://togaware.com/onepager/)
+### Tidyverse
 
+- [Tidyverse Home](https://www.tidyverse.org/)
+- [Tidyverse Packages](https://www.tidyverse.org/packages/)
+- [R for Data Science](https://r4ds.hadley.nz/)
 
-### $\LaTeX$  
+</div>
 
-* [Download LaTeX for Macs (TeXLive)](http://tug.org/mactex/)
-* [Download LaTeX for Windows (MikTeX)](http://miktex.org/)
-* [More Math into LaTeX](http://www.ctan.org/pkg/math-into-latex-4)
-* [Getting started with LaTeX](http://www.tug.org/begin.html)
-* [LaTeX Wikipedia](http://en.wikipedia.org/wiki/LaTeX) 
-* [Clever help finding LaTeX symbols](http://detexify.kirelabs.org/classify.html)
+<div class="resource-card tidy-card">
 
-### Zotero
+### dplyr
 
-* [Using Zotero](https://stat-ata-asu.github.io/STT2810HonorsClassRepo/RMarkdown/ZoteroInClass.html)
+- [dplyr Documentation](https://dplyr.tidyverse.org/)
+- [Introduction to dplyr](https://dplyr.tidyverse.org/articles/dplyr.html)
+- [dplyr Reference](https://dplyr.tidyverse.org/reference/)
 
-### Other Interesting Stuff
-* [R-bloggers](http://r-bloggers.com)
-* [John Chambers recounts the history of S and R](http://blog.revolutionanalytics.com/2014/01/john-chambers-recounts-the-history-of-s-and-r.html)
+</div>
 
-* * *
+</div>
 
+## Data Visualization {.section-title}
 
+<div class="resource-grid">
 
+<div class="resource-card viz-card">
 
+### ggplot2
 
+- [ggplot2 Home](https://ggplot2.tidyverse.org/)
+- [Introduction to ggplot2](https://ggplot2.tidyverse.org/articles/ggplot2.html)
+- [ggplot2 Reference](https://ggplot2.tidyverse.org/reference/)
+- [R Graph Gallery](https://r-graph-gallery.com/)
+
+</div>
+
+<div class="resource-card viz-card">
+
+### Interactive Visualization
+
+- [Plotly for R](https://plotly.com/r/)
+- [Shiny](https://shiny.posit.co/)
+- [DiagrammeR](https://rich-iannone.github.io/DiagrammeR/)
+
+</div>
+
+</div>
+
+## Reproducible Reports & Presentations {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card quarto-card">
+
+### Quarto
+
+- [Quarto Documentation](https://quarto.org/docs/)
+- [Quarto with RStudio](https://quarto.org/docs/get-started/hello/rstudio.html)
+- [Quarto Websites](https://quarto.org/docs/websites/)
+- [Quarto Presentations](https://quarto.org/docs/presentations/)
+- [Quarto Cheatsheet](https://rstudio.github.io/cheatsheets/html/quarto.html)
+
+</div>
+
+<div class="resource-card quarto-card">
+
+### R Markdown
+
+- [R Markdown](https://rmarkdown.rstudio.com/)
+- [R Markdown Package](https://opensource.posit.co/software/rmarkdown/)
+- [Bookdown](https://bookdown.org/yihui/bookdown/)
+
+</div>
+
+</div>
+
+<div class="legacy-note">
+
+**R Markdown or Quarto?** Existing `.Rmd` projects do not need to be rewritten simply because Quarto exists. For new projects, Quarto is often a strong starting point for documents, slides, websites, citations, and multi-language workflows.
+
+</div>
+
+## Git & GitHub {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card git-card">
+
+### Git
+
+- [Git](https://git-scm.com/)
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [Git Reference](https://git-scm.com/docs)
+
+</div>
+
+<div class="resource-card git-card">
+
+### GitHub
+
+- [GitHub Docs](https://docs.github.com/)
+- [Git Basics](https://docs.github.com/en/get-started/git-basics)
+- [Using Git with GitHub](https://docs.github.com/en/get-started/using-git)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)
+
+</div>
+
+</div>
+
+## Shiny & Interactive Apps {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card shiny-card">
+
+### Shiny
+
+- [Shiny Home](https://shiny.posit.co/)
+- [Shiny Tutorials](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/)
+- [Shiny Gallery](https://shiny.posit.co/r/gallery/)
+- [Posit Cheatsheets](https://opensource.posit.co/resources/cheatsheets/)
+
+</div>
+
+<div class="resource-card shiny-card">
+
+### Publishing
+
+- [shinyapps.io](https://www.shinyapps.io/)
+- Posit Connect
+- Institutional or self-hosted Shiny servers
+
+</div>
+
+</div>
+
+## Advanced R & Package Development {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card advanced-card">
+
+### R Package Development
+
+- [R Packages, 2nd Edition](https://r-pkgs.org/)
+- [devtools](https://devtools.r-lib.org/)
+- [pkgdown](https://pkgdown.r-lib.org/)
+- [usethis](https://usethis.r-lib.org/)
+
+</div>
+
+<div class="resource-card advanced-card">
+
+### Advanced R
+
+- [Advanced R](https://adv-r.hadley.nz/)
+- [Efficient R Programming](https://csgillespie.github.io/efficientR/)
+- [R Packages](https://r-pkgs.org/)
+
+</div>
+
+</div>
+
+## LaTeX & References {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card latex-card">
+
+### LaTeX
+
+- [TeX Users Group — Getting Started](https://www.tug.org/begin.html)
+- [MacTeX](https://www.tug.org/mactex/)
+- [MiKTeX](https://miktex.org/)
+- [CTAN](https://www.ctan.org/)
+- [Detexify Symbol Finder](https://detexify.kirelabs.org/classify.html)
+
+</div>
+
+<div class="resource-card latex-card">
+
+### Citations & Reference Management
+
+- [Zotero](https://www.zotero.org/)
+- [Quarto Citations](https://quarto.org/docs/authoring/citations.html)
+- [R Markdown Citations](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+
+</div>
+
+</div>
+
+## Best Quick References {.section-title}
+
+<div class="resource-grid">
+
+<div class="resource-card learn-card">
+
+### Books
+
+- [R for Data Science](https://r4ds.hadley.nz/)
+- [Advanced R](https://adv-r.hadley.nz/)
+- [R Packages](https://r-pkgs.org/)
+- [Bookdown](https://bookdown.org/yihui/bookdown/)
+
+</div>
+
+<div class="resource-card learn-card">
+
+### Documentation & Cheatsheets
+
+- [Posit Cheatsheets](https://opensource.posit.co/resources/cheatsheets/)
+- [CRAN R Manuals](https://cran.r-project.org/manuals.html)
+- [Tidyverse Documentation](https://www.tidyverse.org/)
+- [GitHub Docs](https://docs.github.com/)
+
+</div>
+
+</div>
+
+---

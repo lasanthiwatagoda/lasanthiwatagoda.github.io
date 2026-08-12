@@ -11,12 +11,12 @@
 
 
 
-<title>Resources</title>
+<title>resources.knit</title>
 
 <script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -29,12 +29,7 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -47,16 +42,6 @@
   ul.task-list{list-style: none;}
     </style>
 
-<style type="text/css">code{white-space: pre;}</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
 
 
 
@@ -225,75 +210,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-.tocify-subheader {
-  display: inline;
-}
-.tocify-subheader .tocify-item {
-  font-size: 0.95em;
-}
-
-</style>
-
-
 
 </head>
 
@@ -301,16 +217,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -366,311 +272,306 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Resources</h1>
 
 </div>
 
 
-<div id="r" class="section level3">
-<h3><img src="images/r.png" alt="" width="64" /> R</h3>
+<style>
+body {font-size:16px; line-height:1.7; color:#2b3440;}
+.main-container {max-width:1120px !important;}
+h1,h2,h3 {color:#1f3a5f;}
+a {color:#2f5597;}
+.page-hero {padding:42px 40px; margin:18px 0 34px 0; border-radius:16px; background:linear-gradient(135deg,#f5f8fc 0%,#edf3f9 100%); border:1px solid #dce5ef; box-shadow:0 8px 28px rgba(31,58,95,.08);}
+.page-hero h1 {margin:0 0 8px 0; font-size:2.45em;}
+.page-hero p {margin:0; max-width:850px; color:#52677d; font-size:1.08em;}
+.section-title {margin-top:38px; margin-bottom:18px; padding-bottom:8px; border-bottom:3px solid #d9e2f3;}
+.resource-grid {display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin:20px 0 30px 0;}
+.resource-card {background:white; border:1px solid #dde5ed; border-radius:10px; padding:21px 22px; box-shadow:0 4px 14px rgba(31,58,95,.05);}
+.resource-card h3 {margin-top:0;}
+.resource-card li {margin-bottom:8px;}
+.r-card {border-top:5px solid #276DC3;}
+.posit-card {border-top:5px solid #447099;}
+.tidy-card {border-top:5px solid #2C7FB8;}
+.quarto-card {border-top:5px solid #7952b3;}
+.viz-card {border-top:5px solid #D98C10;}
+.git-card {border-top:5px solid #444;}
+.shiny-card {border-top:5px solid #4f8a5b;}
+.advanced-card {border-top:5px solid #b45f06;}
+.latex-card {border-top:5px solid #6c757d;}
+.learn-card {border-top:5px solid #2f5597;}
+.quick-note {background:#f1f8f2; border-left:6px solid #4f8a5b; padding:17px 20px; border-radius:8px; margin:20px 0 30px 0;}
+.legacy-note {background:#fff8e8; border-left:6px solid #e0a100; padding:17px 20px; border-radius:8px; margin:20px 0;}
+.button {display:inline-block; background:#2f5597; color:white !important; padding:9px 14px; margin:5px 5px 5px 0; border-radius:6px; text-decoration:none !important; font-weight:600;}
+@media(max-width:800px){.resource-grid{grid-template-columns:1fr;}.page-hero{padding:30px 24px;}.page-hero h1{font-size:2em;}}
+</style>
+<div id="computing-data-science-resources"
+class="section level1 page-hero">
+<h1>Computing &amp; Data Science Resources</h1>
+<p>A curated collection of current resources for <strong>R,
+RStudio/Posit, data science, visualization, reproducible reporting,
+Git/GitHub, Shiny, and statistical computing</strong>.</p>
+<p>Rather than an exhaustive list, this page emphasizes resources that
+are useful for students and remain actively maintained.</p>
+</div>
+<div id="recommended-starting-point" class="section level3 quick-note">
+<h3>Recommended Starting Point</h3>
+<p>If you are new to R, start with <strong>R + RStudio</strong>, then
+learn basic <strong>dplyr</strong> and <strong>ggplot2</strong>
+workflows. For reports and presentations, use <strong>Quarto</strong> or
+R Markdown. Git and GitHub become especially useful for larger projects
+and collaborative work.</p>
+</div>
+<div id="core-tools" class="section level2 section-title">
+<h2 class="section-title">Core Tools</h2>
+<div class="resource-grid">
+<div id="r" class="section level3 resource-card r-card">
+<h3>R</h3>
+<p>R is an open-source language and environment for statistical
+computing, data analysis, and graphics.</p>
 <ul>
-<li><a href="http://www.r-project.org/">R homepage</a></li>
-<li><a href="http://cran.r-project.org/">Download R</a></li>
-<li><a href="http://www.statmethods.net/index.html">Quick R (all types
-of examples)</a></li>
+<li><a href="https://www.r-project.org/">R Project</a></li>
+<li><a href="https://cran.r-project.org/">Download R from CRAN</a></li>
 <li><a
-href="http://cran.r-project.org/doc/manuals/r-release/R-intro.html">An
+href="https://cran.r-project.org/doc/manuals/r-release/R-intro.html">An
 Introduction to R</a></li>
-<li><a href="https://bookdown.org/rdpeng/rprogdatascience/"><em>R
-Programming for Data Science</em> by Roger D. Peng</a></li>
-<li><a href="https://bookdown.org/rdpeng/exdata/"><em>Exploratory Data
-Analysis with R</em> by Roger D. Peng</a></li>
-<li><a href="https://bookdown.org/csgillespie/efficientR/"><em>Efficient
-R programming</em> by Colin Gillespie and Robin Lovelace</a></li>
-<li><a href="http://adv-r.had.co.nz/"><em>Advanced R Development</em> by
-Hadley Wickham</a></li>
-<li><a
-href="https://bookdown.org/Tazinho/Advanced-R-Solutions/"><em>Advanced R
-Solutions</em> by Malte Grosser and Henning Bumann</a></li>
-<li><a href="http://www.brodrigues.co/fput/"><em>Functional Programming
-and Unit Testing for Data Munging with R</em></a></li>
-<li><a href="http://nathanieldphillips.com/thepiratesguidetor/">YaRrr!
-The Pirate’s Guide to R by Nathaniel D. Phillips</a></li>
-<li><a href="http://bit.ly/UC5UDc">Roger Peng’s Computing for Data
-Analysis Videos</a></li>
-<li><a
-href="http://flavioazevedo.com/stats-and-r-blog/2016/9/13/learning-r-on-youtube">Learning
-Statistics/R on youtube</a></li>
-<li><a href="https://www.datacamp.com/home">DataCamp</a></li>
-<li><a href="https://www.codeschool.com/courses/try-r">Free Code School
-intro R Course</a></li>
-<li><a href="http://swirlstats.com">swirl</a> “swirl teaches you R
-programming and data science interactively, at your own pace, and right
-in the R console”</li>
-<li><a href="https://www.opencpu.org/posts/opencpu-with-docker/">Why Use
-Docker with R?</a></li>
+<li><a href="https://cran.r-project.org/manuals.html">Official R
+Manuals</a></li>
 </ul>
 </div>
-<div id="rstudio" class="section level3">
-<h3><img src="images/rstudio.jpg" alt="" width="59" /> RStudio</h3>
+<div id="rstudio-posit" class="section level3 resource-card posit-card">
+<h3>RStudio / Posit</h3>
+<p>RStudio is a widely used IDE for R and also supports Python, SQL,
+Quarto, Git, and other tools.</p>
 <ul>
-<li><a href="https://mathr.math.appstate.edu/">ASU RStudio
+<li><a
+href="https://posit.co/products/open-source/rstudio/">RStudio</a></li>
+<li><a href="https://mathr.appstate.edu/">App State RStudio
 Server</a></li>
-<li><a href="http://rstudio.org/">RStudio (IDE)</a></li>
-<li><a href="https://www.rstudio.com/ide/download/preview">RStudio (IDE)
-preview relase</a></li>
-<li><a
-href="https://support.rstudio.com/hc/en-us/categories/200035113-Documentation">RStudio
-Documentation</a></li>
-<li><a href="https://www.rstudio.com/resources/cheatsheets/">RStudio
-Cheat Sheets</a></li>
-<li><a
-href="https://www.rstudio.com/rviews/2016/11/11/easy-tricks-you-mightve-missed/">RStudio
-Easy Tricks for V1.0</a></li>
+<li><a href="https://opensource.posit.co/resources/cheatsheets/">Posit
+Cheatsheets</a></li>
 </ul>
 </div>
-<div id="data-camp" class="section level3">
-<h3><img src="images/DataCamp.png" alt="" width="55" /> Data Camp</h3>
+</div>
+</div>
+<div id="data-science-data-wrangling"
+class="section level2 section-title">
+<h2 class="section-title">Data Science &amp; Data Wrangling</h2>
+<div class="resource-grid">
+<div id="tidyverse" class="section level3 resource-card tidy-card">
+<h3>Tidyverse</h3>
 <ul>
-<li><a href="https://www.datacamp.com/courses/tech:r">Data Science
-Courses Using R</a></li>
-<li><a href="https://www.datacamp.com/courses/tech:python">Data Science
-Courses Using Python</a></li>
+<li><a href="https://www.tidyverse.org/">Tidyverse Home</a></li>
+<li><a href="https://www.tidyverse.org/packages/">Tidyverse
+Packages</a></li>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science</a></li>
 </ul>
 </div>
-<div id="graphics" class="section level3">
-<h3><img src="images/ggplot2.png" alt="" width="59" /> Graphics</h3>
+<div id="dplyr" class="section level3 resource-card tidy-card">
+<h3>dplyr</h3>
 <ul>
-<li><a href="http://www.r-graph-gallery.com/">The <code>R</code> Graph
-Gallery</a></li>
-<li><a href="http://docs.ggplot2.org/current/"><code>ggplot2</code>
-documentation</a></li>
-<li><a href="http://ggplot2.org/"><code>ggplot2</code> Main
-Page</a></li>
-<li><a href="http://ggplot2.org/book/"><code>ggplot2</code>
-Book</a></li>
-<li><a href="http://www.cookbook-r.com/Graphs/">Cookbook for R</a></li>
+<li><a href="https://dplyr.tidyverse.org/">dplyr Documentation</a></li>
 <li><a
-href="http://lmdvr.r-forge.r-project.org/figures/figures.html">Lattice:
-Multivariate Data Visualization with R - Figures and code</a></li>
-<li><a href="http://shinyapps.stat.ubc.ca/r-graph-catalog/">Graph
-Catalog <code>ggplot2</code></a></li>
-<li><a
-href="https://www.rstudio.com/resources/webinars/the-grammar-and-graphics-of-data-science/">The
-Grammar and Graphics of Data Science (Video)</a> (58:50)</li>
-<li><a
-href="https://cpsievert.github.io/plotly_book/"><code>plotly</code> for
-R</a></li>
-<li><a
-href="https://www.datacamp.com/community/open-courses/plotly-tutorial-plotly-and-r">Plotly
-tutorial: Plotly and R</a></li>
-<li><a href="https://bookdown.org/paulcbauer/idv2/"><em>Interactive Data
-Visualization (2nd Day)</em> by Paul C. Bauer and Richard
-Traunmüller</a></li>
-<li><a
-href="http://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a></li>
+href="https://dplyr.tidyverse.org/articles/dplyr.html">Introduction to
+dplyr</a></li>
+<li><a href="https://dplyr.tidyverse.org/reference/">dplyr
+Reference</a></li>
 </ul>
 </div>
-<div id="shiny-apps" class="section level3">
-<h3><img src="images/shiny.png" alt="" width="59" /> Shiny Apps</h3>
+</div>
+</div>
+<div id="data-visualization" class="section level2 section-title">
+<h2 class="section-title">Data Visualization</h2>
+<div class="resource-grid">
+<div id="ggplot2" class="section level3 resource-card viz-card">
+<h3>ggplot2</h3>
 <ul>
-<li><a href="http://shiny.rstudio.com/">Shiny</a></li>
-<li><a href="https://shinyapps.io">shinyapps.io server</a></li>
-<li><a href="http://docs.rstudio.com/shinyapps.io/">Shiny Apps
-Documentation</a></li>
-<li><a href="https://www.rstudio.com/resources/cheatsheets/">Shiny
-Cheatsheet</a></li>
-<li><a href="http://stat545.com/shiny01_activity.html">Building Shiny
-Apps</a></li>
-<li><a href="https://alanarnholt.shinyapps.io/norm_area2/">Normal
-Distribution Calculator (running on RStudio Shiny Apps server)</a></li>
-<li><a href="http://alanarnholt.com/shiny/NormalApp/">Normal
-Distribution Calculator (running on Alan’s Droplet)</a></li>
-<li><a href="http://alanarnholt.com/shiny/NormApp3/">Normal Distribution
-Calculator (with more features running on Alan’s Droplet)</a></li>
-<li><a href="http://alanarnholt.com/shiny/SamplingDist/">Sampling
-Distributions (running on Alan’s Droplet)</a></li>
+<li><a href="https://ggplot2.tidyverse.org/">ggplot2 Home</a></li>
 <li><a
-href="http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/">How
-to get your very own RStudio Server and Shiny Server with
-DigitalOcean</a></li>
+href="https://ggplot2.tidyverse.org/articles/ggplot2.html">Introduction
+to ggplot2</a></li>
+<li><a href="https://ggplot2.tidyverse.org/reference/">ggplot2
+Reference</a></li>
+<li><a href="https://r-graph-gallery.com/">R Graph Gallery</a></li>
 </ul>
 </div>
-<div id="r-package-building" class="section level3">
-<h3><img src="images/devtools.png" alt="" width="60" /> R Package
-Building</h3>
+<div id="interactive-visualization"
+class="section level3 resource-card viz-card">
+<h3>Interactive Visualization</h3>
 <ul>
-<li><a href="http://r-pkgs.had.co.nz/"><em>R Packages</em> by Hadley
-Wickham</a></li>
-<li><a href="https://bookdown.org/rdpeng/RProgDA/"><em>Mastering
-Software Development in R</em> by Roger D. Peng, Sean Kross, and Brooke
-Anderson</a></li>
+<li><a href="https://plotly.com/r/">Plotly for R</a></li>
+<li><a href="https://shiny.posit.co/">Shiny</a></li>
 <li><a
-href="http://hafen.github.io/packagedocs/"><code>packagedocs</code></a></li>
-<li><a
-href="https://hadley.github.io/pkgdown/"><code>pkgdown</code></a></li>
+href="https://rich-iannone.github.io/DiagrammeR/">DiagrammeR</a></li>
 </ul>
 </div>
-<div id="using-dplyr" class="section level3">
-<h3><img src="images/dplyr.png" alt="" width="59" /> Using <a
-href="https://cran.r-project.org/web/packages/dplyr/index.html"><code>dplyr</code></a></h3>
-<ul>
-<li><a
-href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">Introduction
-to <code>dplyr</code> vignette</a></li>
-<li><a
-href="http://www.dataschool.io/dplyr-tutorial-for-faster-data-manipulation-in-r/"><code>dplyr</code>
-video1-tutorial</a></li>
-<li><a
-href="http://www.dataschool.io/dplyr-tutorial-part-2/"><code>dplyr</code>
-video2-tutorial</a></li>
-</ul>
 </div>
-<div id="reproducible-analysis" class="section level3">
-<h3><img src="images/knitr.png" alt="" width="59" />Reproducible
-Analysis</h3>
-<ul>
-<li><a href="http://yihui.name/knitr/"><code>knitr</code>
-Homepage</a></li>
-<li><a href="https://github.com/yihui/knitr"><code>knitr</code> Package
-Development on GitHub</a></li>
-<li><a href="https://bookdown.org/yihui/bookdown/"><em>Bookdown:
-Authoring Books with R Markdown</em> by Yihui Xie</a></li>
-<li><a
-href="https://github.com/christophergandrud/Rep-Res-Book"><em>Reproducible
-Research with</em> R/RStudio Development on GitHub</a></li>
-<li><a
-href="http://cran.r-project.org/web/views/ReproducibleResearch.html">CRAN
-views of Reproducible Analysis</a></li>
-<li><a
-href="https://www.rstudio.com/resources/webinars/reproducible-reporting/">Reproducible
-Reporting (Video)</a> (58:03)</li>
-<li><a href="https://ismayc.github.io/rbasics-book/"><em>Getting used to
-R, RStudio, and R Markdown</em> by Chester Ismay</a></li>
-<li><a href="https://ismayc.github.io/thesisdown_book/index.html"><em>My
-Final College Paper</em> by Chester Ismay</a></li>
-</ul>
 </div>
-<div id="r-markdown" class="section level3">
-<h3><img src="images/rmarkdown.png" alt="" width="59" /> R
-Markdown</h3>
+<div id="reproducible-reports-presentations"
+class="section level2 section-title">
+<h2 class="section-title">Reproducible Reports &amp; Presentations</h2>
+<div class="resource-grid">
+<div id="quarto" class="section level3 resource-card quarto-card">
+<h3>Quarto</h3>
 <ul>
-<li><a href="http://rmarkdown.rstudio.com">R Markdown V2</a></li>
+<li><a href="https://quarto.org/docs/">Quarto Documentation</a></li>
 <li><a
-href="https://support.rstudio.com/hc/en-us/sections/200149716-R-Markdown">Using
-R Markdown</a></li>
-<li><a
-href="https://www.rstudio.com/resources/webinars/getting-started-with-r-markdown/">Getting
-started with R Markdown (Video)</a> (1:02:44)</li>
-<li><a
-href="http://daringfireball.net/projects/markdown/">Markdown</a></li>
-</ul>
-</div>
-<div id="creating-slides-with-r" class="section level3">
-<h3><img src="images/rmarkdown.png" alt="" width="59" /> Creating
-Slides with R</h3>
-<ul>
-<li><a
-href="http://rmarkdown.rstudio.com/ioslides_presentation_format.html#overview">R
-Markdown - ioslides, reveal.js, Slidy, and Beamer</a></li>
-<li><a
-href="https://github.com/yihui/xaringan"><code>xaringan</code></a></li>
-<li><a
-href="https://support.rstudio.com/hc/en-us/sections/200130218-R-Presentations">R
+href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto
+with RStudio</a></li>
+<li><a href="https://quarto.org/docs/websites/">Quarto Websites</a></li>
+<li><a href="https://quarto.org/docs/presentations/">Quarto
 Presentations</a></li>
-</ul>
-</div>
-<div id="git" class="section level3">
-<h3><img src="images/git.jpg" alt="" width="64" /> Git</h3>
-<ul>
-<li><a href="http://happygitwithr.com/"><em>Happy Git and GitHub for the
-useR</em> by Jenny Bryan and the STAT 545 TAs</a></li>
-<li><a href="http://git-scm.com">Download Git</a></li>
-<li><a href="https://help.github.com/">GitHub Help Page</a></li>
-<li><a href="https://www.atlassian.com/git/tutorial">Git Tutorials
-(bitbucket)</a></li>
-<li><a href="http://gitimmersion.com/lab_03.html">Create a
-Project</a></li>
-<li><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Git
+<li><a
+href="https://rstudio.github.io/cheatsheets/html/quarto.html">Quarto
 Cheatsheet</a></li>
-<li><a href="https://www.codeschool.com/courses/try-git">Free Code
-School Intro to Git</a></li>
-<li><a href="http://git-scm.com/book">Pro Git Book</a></li>
-<li><a href="http://try.github.io/levels/1/challenges/1">Try Git on
-GitHub</a></li>
-<li><a href="http://www.pgbovine.net/git-tutorial.htm">Phillip Guo’s
-Basic Git and Github tutorials (Three tutorials about 10 minutes
-each)</a></li>
-<li><a href="https://www.youtube.com/watch?v=YxZ8J2rqhEM">Clone a GitHub
-Repo with RStudio (Video)</a> (5:05)</li>
-<li><a
-href="https://github.com/alanarnholt/Homework-Examples/blob/master/Slides/ForkCloneRStudio.pdf">Clone
-a GitHub Repo with RStudio (Slides)</a></li>
-<li><a
-href="https://www.rstudio.com/resources/webinars/collaboration-and-time-travel-version-control-with-git-github-and-rstudio/">Collaboration
-and time travel: version control with git, github and RStudio
-(Video)</a> (48:56)</li>
 </ul>
 </div>
-<div id="using-unix-like-commands" class="section level3">
-<h3><img src="images/linux2.png" alt="" width="61" /> Using Unix Like
-Commands</h3>
+<div id="r-markdown" class="section level3 resource-card quarto-card">
+<h3>R Markdown</h3>
 <ul>
+<li><a href="https://rmarkdown.rstudio.com/">R Markdown</a></li>
+<li><a href="https://opensource.posit.co/software/rmarkdown/">R Markdown
+Package</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">Bookdown</a></li>
+</ul>
+</div>
+</div>
+<div class="legacy-note">
+<p><strong>R Markdown or Quarto?</strong> Existing <code>.Rmd</code>
+projects do not need to be rewritten simply because Quarto exists. For
+new projects, Quarto is often a strong starting point for documents,
+slides, websites, citations, and multi-language workflows.</p>
+</div>
+</div>
+<div id="git-github" class="section level2 section-title">
+<h2 class="section-title">Git &amp; GitHub</h2>
+<div class="resource-grid">
+<div id="git" class="section level3 resource-card git-card">
+<h3>Git</h3>
+<ul>
+<li><a href="https://git-scm.com/">Git</a></li>
+<li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></li>
+<li><a href="https://git-scm.com/docs">Git Reference</a></li>
+</ul>
+</div>
+<div id="github" class="section level3 resource-card git-card">
+<h3>GitHub</h3>
+<ul>
+<li><a href="https://docs.github.com/">GitHub Docs</a></li>
+<li><a href="https://docs.github.com/en/get-started/git-basics">Git
+Basics</a></li>
+<li><a href="https://docs.github.com/en/get-started/using-git">Using Git
+with GitHub</a></li>
+<li><a href="https://happygitwithr.com/">Happy Git and GitHub for the
+useR</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="shiny-interactive-apps" class="section level2 section-title">
+<h2 class="section-title">Shiny &amp; Interactive Apps</h2>
+<div class="resource-grid">
+<div id="shiny" class="section level3 resource-card shiny-card">
+<h3>Shiny</h3>
+<ul>
+<li><a href="https://shiny.posit.co/">Shiny Home</a></li>
 <li><a
-href="http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html">Play
-Terminus to learn basics of the shell</a></li>
-<li><a href="http://www.pgbovine.net/command-line-tutorial.htm">Phillip
-Guo’s Unix-like command line tutorials (Four tutorials about 10 minutes
-each)</a></li>
-<li><a href="http://www.ee.surrey.ac.uk/Teaching/Unix/">Michael
-Stonebank’s Unix Tutorial for Beginners</a></li>
+href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">Shiny
+Tutorials</a></li>
+<li><a href="https://shiny.posit.co/r/gallery/">Shiny Gallery</a></li>
+<li><a href="https://opensource.posit.co/resources/cheatsheets/">Posit
+Cheatsheets</a></li>
 </ul>
 </div>
-<div id="data-science" class="section level3">
-<h3>Data Science</h3>
+<div id="publishing" class="section level3 resource-card shiny-card">
+<h3>Publishing</h3>
 <ul>
-<li><a href="http://r4ds.had.co.nz/"><em>R for Data Science</em> by
-Garrett Grolemund and Hadley Wickham</a></li>
-<li><a href="https://ismayc.github.io/moderndiver-book/"><em>A MODERN
-DIVE into Data with R</em> by Chester Ismay and Albert Y. Kim</a></li>
-<li><a href="http://tidytextmining.com/"><em>Tidy Text Mining with
-R</em> by Julia Silge and David Robinson</a></li>
-<li><a href="http://togaware.com/onepager/">OnePageR</a></li>
+<li><a href="https://www.shinyapps.io/">shinyapps.io</a></li>
+<li>Posit Connect</li>
+<li>Institutional or self-hosted Shiny servers</li>
 </ul>
 </div>
-<div id="latex" class="section level3">
-<h3><span class="math inline">\(\LaTeX\)</span></h3>
+</div>
+</div>
+<div id="advanced-r-package-development"
+class="section level2 section-title">
+<h2 class="section-title">Advanced R &amp; Package Development</h2>
+<div class="resource-grid">
+<div id="r-package-development"
+class="section level3 resource-card advanced-card">
+<h3>R Package Development</h3>
 <ul>
-<li><a href="http://tug.org/mactex/">Download LaTeX for Macs
-(TeXLive)</a></li>
-<li><a href="http://miktex.org/">Download LaTeX for Windows
-(MikTeX)</a></li>
-<li><a href="http://www.ctan.org/pkg/math-into-latex-4">More Math into
-LaTeX</a></li>
-<li><a href="http://www.tug.org/begin.html">Getting started with
-LaTeX</a></li>
-<li><a href="http://en.wikipedia.org/wiki/LaTeX">LaTeX
-Wikipedia</a></li>
-<li><a href="http://detexify.kirelabs.org/classify.html">Clever help
-finding LaTeX symbols</a></li>
+<li><a href="https://r-pkgs.org/">R Packages, 2nd Edition</a></li>
+<li><a href="https://devtools.r-lib.org/">devtools</a></li>
+<li><a href="https://pkgdown.r-lib.org/">pkgdown</a></li>
+<li><a href="https://usethis.r-lib.org/">usethis</a></li>
 </ul>
 </div>
-<div id="zotero" class="section level3">
-<h3>Zotero</h3>
+<div id="advanced-r" class="section level3 resource-card advanced-card">
+<h3>Advanced R</h3>
 <ul>
+<li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
+<li><a href="https://csgillespie.github.io/efficientR/">Efficient R
+Programming</a></li>
+<li><a href="https://r-pkgs.org/">R Packages</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="latex-references" class="section level2 section-title">
+<h2 class="section-title">LaTeX &amp; References</h2>
+<div class="resource-grid">
+<div id="latex" class="section level3 resource-card latex-card">
+<h3>LaTeX</h3>
+<ul>
+<li><a href="https://www.tug.org/begin.html">TeX Users Group — Getting
+Started</a></li>
+<li><a href="https://www.tug.org/mactex/">MacTeX</a></li>
+<li><a href="https://miktex.org/">MiKTeX</a></li>
+<li><a href="https://www.ctan.org/">CTAN</a></li>
+<li><a href="https://detexify.kirelabs.org/classify.html">Detexify
+Symbol Finder</a></li>
+</ul>
+</div>
+<div id="citations-reference-management"
+class="section level3 resource-card latex-card">
+<h3>Citations &amp; Reference Management</h3>
+<ul>
+<li><a href="https://www.zotero.org/">Zotero</a></li>
+<li><a href="https://quarto.org/docs/authoring/citations.html">Quarto
+Citations</a></li>
 <li><a
-href="https://stat-ata-asu.github.io/STT2810HonorsClassRepo/RMarkdown/ZoteroInClass.html">Using
-Zotero</a></li>
+href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">R
+Markdown Citations</a></li>
 </ul>
 </div>
-<div id="other-interesting-stuff" class="section level3">
-<h3>Other Interesting Stuff</h3>
+</div>
+</div>
+<div id="best-quick-references" class="section level2 section-title">
+<h2 class="section-title">Best Quick References</h2>
+<div class="resource-grid">
+<div id="books" class="section level3 resource-card learn-card">
+<h3>Books</h3>
 <ul>
-<li><a href="http://r-bloggers.com">R-bloggers</a></li>
-<li><a
-href="http://blog.revolutionanalytics.com/2014/01/john-chambers-recounts-the-history-of-s-and-r.html">John
-Chambers recounts the history of S and R</a></li>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science</a></li>
+<li><a href="https://adv-r.hadley.nz/">Advanced R</a></li>
+<li><a href="https://r-pkgs.org/">R Packages</a></li>
+<li><a href="https://bookdown.org/yihui/bookdown/">Bookdown</a></li>
 </ul>
+</div>
+<div id="documentation-cheatsheets"
+class="section level3 resource-card learn-card">
+<h3>Documentation &amp; Cheatsheets</h3>
+<ul>
+<li><a href="https://opensource.posit.co/resources/cheatsheets/">Posit
+Cheatsheets</a></li>
+<li><a href="https://cran.r-project.org/manuals.html">CRAN R
+Manuals</a></li>
+<li><a href="https://www.tidyverse.org/">Tidyverse
+Documentation</a></li>
+<li><a href="https://docs.github.com/">GitHub Docs</a></li>
+</ul>
+</div>
+</div>
 <hr />
 </div>
 
@@ -800,8 +701,6 @@ Email Me →
 </footer>
 
 
-</div>
-</div>
 
 </div>
 
@@ -834,35 +733,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = false;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
