@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -14,24 +13,38 @@
 
 <title>Software</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.31/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/yeti.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -44,32 +57,8 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
+
 
 <link rel="stylesheet" href="alans.css" type="text/css" />
 
@@ -81,13 +70,8 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -101,40 +85,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 45px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h2 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h3 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h4 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h5 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-.section h6 {
-  padding-top: 50px;
-  margin-top: -50px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -162,7 +122,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -174,7 +134,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -184,11 +144,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -200,13 +177,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -214,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -236,6 +205,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -266,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -276,22 +246,19 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="for-students.html">For Students</a>
-</li>
-<li>
-  <a href="resources.html">Resources</a>
-</li>
-<li>
   <a href="teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="for-students.html">For Students</a>
 </li>
 <li>
   <a href="scholarship.html">Scholarship</a>
 </li>
 <li>
-  <a href="SSD.html">Student Scholars Day 2019</a>
+  <a href="resources.html">Resources</a>
 </li>
 <li>
-  <a href="coolstuff.html">Cool Stuff</a>
+  <a href="coolstuff.html">Beyond Academia</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -313,7 +280,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -325,46 +292,163 @@ $(document).ready(function () {
 <div id="r-packages" class="section level2">
 <h2>R packages</h2>
 <ul>
-<li><a href="https://github.com/alanarnholt/PASWR">PASWR development on GitHub</a>—<a href="https://alanarnholt.github.io/PASWR">Web Page</a>—<a href="https://cran.r-project.org/web/packages/PASWR/index.html">PASWR on CRAN</a></li>
-<li><a href="https://github.com/alanarnholt/PASWR2">PASWR2 development on GitHub</a>—<a href="https://alanarnholt.github.io/PASWR2">Web Page</a>—<a href="https://cran.r-project.org/web/packages/PASWR2/index.html">PASWR2 on CRAN</a></li>
-<li><a href="https://github.com/alanarnholt/BSDA">BSDA development on GitHub</a>—<a href="https://alanarnholt.github.io/BSDA">Web Page</a>—<a href="https://cran.r-project.org/web/packages/BSDA/index.html">BSDA on CRAN</a></li>
-<li><a href="https://github.com/alanarnholt/PDS">PDS development on GitHub</a>—<a href="https://alanarnholt.github.io/PDS">Web Page</a></li>
+<li><a href="https://github.com/alanarnholt/PASWR">PASWR development on
+GitHub</a>—<a href="https://alanarnholt.github.io/PASWR">Web Page</a>—<a
+href="https://cran.r-project.org/web/packages/PASWR/index.html">PASWR on
+CRAN</a></li>
+<li><a href="https://github.com/alanarnholt/PASWR2">PASWR2 development
+on GitHub</a>—<a href="https://alanarnholt.github.io/PASWR2">Web
+Page</a>—<a
+href="https://cran.r-project.org/web/packages/PASWR2/index.html">PASWR2
+on CRAN</a></li>
+<li><a href="https://github.com/alanarnholt/BSDA">BSDA development on
+GitHub</a>—<a href="https://alanarnholt.github.io/BSDA">Web Page</a>—<a
+href="https://cran.r-project.org/web/packages/BSDA/index.html">BSDA on
+CRAN</a></li>
+<li><a href="https://github.com/alanarnholt/PDS">PDS development on
+GitHub</a>—<a href="https://alanarnholt.github.io/PDS">Web Page</a></li>
 </ul>
 </div>
 <div id="s-plus-package" class="section level2">
 <h2>S-PLUS package</h2>
 <ul>
-<li><a href="http://csan.insightful.com/PackageDetails.aspx?Package=paswr">PASWR</a></li>
+<li><a
+href="http://csan.insightful.com/PackageDetails.aspx?Package=paswr">PASWR</a></li>
 </ul>
 </div>
 <div id="bookdown" class="section level2">
 <h2>Bookdown</h2>
 <ul>
-<li><a href="https://alanarnholt.github.io/PDS-Bookdown2/"><em>Passion Driven Statistics</em></a></li>
+<li><a href="https://alanarnholt.github.io/PDS-Bookdown2/"><em>Passion
+Driven Statistics</em></a></li>
 </ul>
 <hr />
 </div>
 
-<div id="footer">
-     <p><strong>Lasanthi Watagoda</strong> </br>
-			Assistant Professor of Statistics </br>
-      <a href="mailto:lasanthi@appstate.edu"> lasanthi@appstate.edu</a>  </br>
-      <img src="images/asu-logo-white-600.png" style="background-color:black; width:180px; float:left;" width =  /> 
-</p>
-        
-        <p><a href="https://lasanthi.youcanbook.me/" data-ycbm-modal="true"><img src="https://youcanbook.me/resources/pics/ycbm-button.png" style="border-style:none;"/></a>
-        </p>
-      
-        
-        <p>
-    <strong>Mailing Address</strong><br />      
-    <a href = "http://www.appstate.edu/"> Appalachian State University</a><br />
-		<a href= "https://mathsci.appstate.edu/"> Department of Mathematical Sciences</a><br />
-		Walker Hall 340<br />
-		121 Bodenheimer Dr<br />
-		Boone, NC 28608
-		</p> 
+<style>
+.appstate-footer {
+  margin-top: 55px;
+  background: #010101;
+  color: #ffffff;
+  border-top: 6px solid #FFCC00;
+  padding: 30px 34px;
+  border-radius: 10px 10px 0 0;
+}
+
+.appstate-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.appstate-footer-logo {
+  width: 190px;
+  height: auto;
+  display: block;
+}
+
+.appstate-footer-info {
+  flex: 1;
+  text-align: right;
+  line-height: 1.55;
+  font-size: 0.94em;
+  color: #eeeeee;
+}
+
+.appstate-footer-name {
+  color: #ffffff;
+  font-size: 1.05em;
+  font-weight: 700;
+}
+
+.appstate-footer-dept {
+  color: #FFCC00;
+  font-weight: 600;
+}
+
+.appstate-footer a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.appstate-footer a:hover {
+  color: #FFCC00 !important;
+  text-decoration: none;
+}
+
+.footer-email {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 7px 12px;
+  border: 1px solid #FFCC00;
+  border-radius: 5px;
+  color: #FFCC00 !important;
+  font-weight: 600;
+}
+
+.footer-email:hover {
+  background: #FFCC00;
+  color: #010101 !important;
+}
+
+@media (max-width: 700px) {
+  .appstate-footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .appstate-footer-info {
+    text-align: center;
+  }
+
+  .appstate-footer-logo {
+    width: 170px;
+  }
+}
+</style>
+
+<footer class="appstate-footer">
+
+<div class="appstate-footer-inner">
+
+<div>
+<a href="https://www.appstate.edu/" target="_blank">
+<img
+  src="images/appstate-logo-white-gold.png"
+  class="appstate-footer-logo"
+  alt="Appalachian State University">
+</a>
 </div>
+
+<div class="appstate-footer-info">
+
+<div class="appstate-footer-name">
+Dr. Lasanthi Watagoda
+</div>
+
+<div class="appstate-footer-dept">
+Department of Mathematical Sciences
+</div>
+
+Associate Professor of Statistics<br>
+Appalachian State University<br>
+Boone, North Carolina
+
+<br>
+
+<a class="footer-email"
+   href="mailto:watagodal@appstate.edu">
+Email Me →
+</a>
+
+</div>
+
+</div>
+
+</footer>
 
 
 
@@ -374,7 +458,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -392,7 +476,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

@@ -222,7 +222,7 @@ This page highlights courses taught, instructional experience, online teaching, 
 
 <div class="current-card">
 
-<span class="course-code">STT 3851</span>
+<span class="course-code">STT 3852</span>
 
 ### Statistical Data Analysis II
 
@@ -234,9 +234,9 @@ A course focused on statistical modeling, data analysis, computing, and interpre
 
 <div class="current-card">
 
-<span class="course-code">STT 2810</span>
+<span class="course-code">STT 2820</span>
 
-### Introduction to Statistics
+### Reasoning with Statistics
 
 An introductory statistics course emphasizing statistical reasoning, data analysis, and interpretation.
 
